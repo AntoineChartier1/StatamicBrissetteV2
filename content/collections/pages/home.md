@@ -1,10 +1,13 @@
 ---
-title: Home
 id: home
-template: home
 blueprint: pages
+title: Home
+template: home
+author: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
+updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
+updated_at: 1712342633
 ---
-## Welcome to your brand new Statamic site!
+## Welcome to your brand new Setup Statamic ROUGE!
 
 Not sure where to do next? Here are a few ideas, but feel free to explore in your own way, in your own time.
 
