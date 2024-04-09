@@ -8,6 +8,12 @@
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
     <body class="bg-gray-100 font-sans leading-normal text-gray-800">
+        <nav class="bg-white text-xs uppercase text-green text-center flex items-center justify-center space-x-4">
+            {{ nav from="pages" include_home="true" }}
+                <a href="{{ url }}" class="p-2 block hover:text-yellow-200">{{ title }}</a>
+            {{ /nav  }}
+        </nav>
+    
         <div class="mx-auto px-2 lg:min-h-screen flex flex-col items-center justify-center">
             {{ template_content }}
         </div>
