@@ -1,6 +1,4 @@
 // This is all you.
-// This is all you.
-// import 'flowbite';
 // Import the Carousel class from Flowbite
 import { Carousel } from 'flowbite';
 
@@ -45,7 +43,7 @@ const items = [
 // Set the options
 const options = {
     // Add your options here...
-    interval: 6000,
+    interval: 6000, // interval pour le carousel automatique (static / slide)
 };
 
 // Create the carousel
@@ -65,7 +63,7 @@ $prevButton.addEventListener('click', () => {
         carousel.prev();
         setTimeout(() => {
             isTransitioning = false;
-        }, 600); // Replace 600 with your transition duration
+        }, 500); // Replace 500 with your transition duration
     }
 });
 
@@ -75,7 +73,7 @@ $nextButton.addEventListener('click', () => {
         carousel.next();
         setTimeout(() => {
             isTransitioning = false;
-        }, 600); // Replace 600 with your transition duration
+        }, 500); // Replace 500 with your transition duration
     }
 });
 
