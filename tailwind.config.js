@@ -13,6 +13,7 @@ export default {
         extend: {
             colors: {
                 rougeBrissette: "#e73b44",
+                vert: "#396b2a",
             },
             fontFamily: {
                 sora: ["Sora", "sans-serif"],

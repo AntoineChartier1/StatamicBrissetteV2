@@ -4,31 +4,34 @@
         class="relative overflow-hidden [height:_clamp(20em,40vw,40vw)]"
     >
         <!-- Item 1 -->
-        {{ carousel }}
+        {{ grid_field }}
         <div id="carousel-item-{{index}}" class=" hidden duration-200 ease-linear" data-carousel-item>
             <div class="flex h-full">
                 <div class="w-1/2">
                     <!-- First element goes here -->
-                    <div class="flex flex-col justify-between h-full [padding:_clamp(0.9em,8vw,8vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)] bg-rougeBrissette">
-                        <div class="[font-size:_clamp(0.9em,2.2vw,6vw)] text-pretty text-white"> {{textearea}}   </div>
-                        <a href="#">
-                            <button class="self-start inline-flex items-center justify-center text-center rounded-2xl font-semibold bg-white py-2 px-1.5 md:py-4 md:px-9 xl:py-6 xl:px-12 xl:text-2xl ">En&nbsp;savoir&nbsp;plus&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                    <div class="flex flex-col justify-between h-full [padding:_clamp(0.9em,8vw,8vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)] {{couleur_bg}} ">
+                        <div class="[font-size:_clamp(0.9em,2.2vw,6vw)] font-ul text-pretty text-white"> {{titre}}  </div>
+                        {{ if bouton }}
+                        <a href="{{btn_url}}" class="self-start inline-flex items-center justify-center text-center rounded-2xl font-semibold bg-white py-2 px-1.5 md:py-4 md:px-9 xl:py-6 xl:px-12 xl:text-2xl ">
+                            {{btn_txt}} &nbsp;
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
                                 <path d="M1 7.93536L14.7232 7.79851M9.61818 1.41132L16.1412 7.9343L9.48677 14.5887" stroke="#292F36" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
-                            </svg></button>
+                            </svg>
                         </a>
+                    {{ /if }}
                     </div>
                 </div>
                 <div class="w-1/2">
                     <!-- Second element goes here -->
                     <img
-                        src="{{ glide src="{{image}}" }}"
+                        src="{{ glide src="{{assets_field}}" }}"
                         class="w-full h-full object-cover"
-                        alt="{{image.alt}}"
+                        alt="{{assets_field.alt}}"
                     />
                 </div>
             </div>
         </div>
-        {{ /carousel }}
+        {{ /grid_field }}
         <!-- Item 2 -->
         <!-- <div id="carousel-item-2" class=" hidden duration-200 ease-linear" data-carousel-item> -->
             <!-- <div class="flex h-full"> -->

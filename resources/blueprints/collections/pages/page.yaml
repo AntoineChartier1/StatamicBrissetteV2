@@ -60,32 +60,135 @@ tabs:
               display: Template
               localizable: true
   carousel:
-    display: carousel
+    display: Carousel
     sections:
       -
-        display: slider
+        display: Carousel
         fields:
           -
-            handle: carousel
+            handle: grid_field
             field:
-              collapse: false
-              previews: true
+              fields:
+                -
+                  handle: titre
+                  field:
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    character_limit: 300
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: titre
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: assets_field
+                  field:
+                    max_files: 1
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'Assets Field'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: bouton
+                  field:
+                    default: true
+                    type: toggle
+                    display: bouton
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    inline_label: 'afficher un bouton ?'
+                -
+                  handle: btn_txt
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'texte du bouton'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    if:
+                      bouton: 'equals true'
+                -
+                  handle: btn_url
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'url du bouton'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    duplicate: false
+                    hide_display: false
+                    if:
+                      bouton: 'equals true'
+                -
+                  handle: couleur_bg
+                  field:
+                    options:
+                      bg-rougeBrissette: 'rouge courchesne'
+                      bg-vert: vert
+                    inline: true
+                    cast_booleans: false
+                    default: bg-rougeBrissette
+                    type: radio
+                    display: 'couleur bg'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+              mode: stacked
+              reorderable: true
               fullscreen: true
-              sets:
-                slide:
-                  display: Slide
-                  instructions: null
-                  icon: bookmark
-                  sets:
-                    slide:
-                      display: Slide
-                      instructions: null
-                      icon: layout-table-row-insert
-                      fields:
-                        -
-                          import: slide
-              type: replicator
-              display: Carousel
+              type: grid
+              display: 'Grid Field'
               listable: hidden
               instructions_position: above
               visibility: visible

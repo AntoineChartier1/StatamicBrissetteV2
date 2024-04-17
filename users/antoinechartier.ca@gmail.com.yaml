@@ -6,3 +6,7 @@ preferences:
   collections:
     pages:
       after_save: continue_editing
+  favorites:
+    -
+      name: 'Home ‹ Pages ‹ Collections'
+      url: collections/pages/entries/home
