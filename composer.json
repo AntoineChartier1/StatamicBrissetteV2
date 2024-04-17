@@ -1,5 +1,6 @@
 {
     "name": "statamic/statamic",
+    "version": "4.56.1",
     "description": "Statamic",
     "keywords": [
         "statamic",
