@@ -13,25 +13,22 @@ tabs:
               validate:
                 - required
           -
-            handle: content
+            handle: assets_field
             field:
-              type: markdown
-              display: Content
-              localizable: true
-          -
-            handle: author
-            field:
-              type: users
-              display: Author
-              default: current
-              localizable: true
-              max_items: 1
-          -
-            handle: template
-            field:
-              type: template
-              display: Template
-              localizable: true
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Assets Field'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
           -
             handle: entries_field_info
             field:
@@ -49,17 +46,46 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
-            handle: assets_field
+            handle: author
             field:
-              max_files: 1
-              mode: list
-              container: assets
-              restrict: false
-              allow_uploads: true
-              show_filename: true
-              show_set_alt: true
-              type: assets
-              display: 'Assets Field'
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+  carousel:
+    display: carousel
+    sections:
+      -
+        display: slider
+        fields:
+          -
+            handle: carousel
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                slide:
+                  display: Slide
+                  instructions: null
+                  icon: bookmark
+                  sets:
+                    slide:
+                      display: Slide
+                      instructions: null
+                      icon: layout-table-row-insert
+                      fields:
+                        -
+                          import: slide
+              type: replicator
+              display: Carousel
               listable: hidden
               instructions_position: above
               visibility: visible

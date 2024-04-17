@@ -24,21 +24,29 @@ const initApp = () => {
 const carouselElement = document.getElementById('carousel-example');
 
 // Get the carousel items
-const items = [
-    {
-        position: 0,
-        el: document.getElementById('carousel-item-1'),
-    },
-    {
-        position: 1,
-        el: document.getElementById('carousel-item-2'),
-    },
-    {
-        position: 2,
-        el: document.getElementById('carousel-item-3'),
-    },
-    // Add more items as needed...
-];
+const carouselItems = document.querySelectorAll('[data-carousel-item]');
+
+const items = Array.from(carouselItems).map((el, index) => {
+    return {
+        position: index,
+        el: el
+    };
+});
+// const items = [
+//     {
+//         position: 0,
+//         el: document.getElementById('carousel-item-1'),
+//     },
+//     {
+//         position: 1,
+//         el: document.getElementById('carousel-item-2'),
+//     },
+//     {
+//         position: 2,
+//         el: document.getElementById('carousel-item-3'),
+//     },
+//     // Add more items as needed...
+// ];
 
 // Set the options
 const options = {
@@ -61,9 +69,10 @@ $prevButton.addEventListener('click', () => {
     if (!isTransitioning) {
         isTransitioning = true;
         carousel.prev();
+        console.log('prev');
         setTimeout(() => {
             isTransitioning = false;
-        }, 500); // Replace 500 with your transition duration
+        }, 300); // Replace 300 with your transition duration
     }
 });
 
@@ -73,7 +82,7 @@ $nextButton.addEventListener('click', () => {
         carousel.next();
         setTimeout(() => {
             isTransitioning = false;
-        }, 500); // Replace 500 with your transition duration
+        }, 300); // Replace 300 with your transition duration
     }
 });
 
