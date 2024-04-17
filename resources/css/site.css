@@ -3,3 +3,23 @@
 @import "tailwindcss/utilities";
 
 /* This is all you. */
+
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+
+.toggle-btn {
+    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent;
+}
+
+/* // dans le cas ou les ligne précédente ne fonctionne pas, pour l'effet de transition sur le bouton X  */
+/* .toggle-btn > div::before {
+    @apply translate-y-0 rotate-45;
+}
+
+.toggle-btn > div::after {
+    @apply translate-y-0 -rotate-45;
+}
+
+.toggle-btn > div {
+    @apply bg-transparent;
+} */
