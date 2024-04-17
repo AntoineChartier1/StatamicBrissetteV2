@@ -5,7 +5,8 @@ title: Home
 template: home
 author: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1712342633
+updated_at: 1713363104
+assets_field: hero.webp
 ---
 ## Welcome to your brand new Setup Statamic ROUGE!
 
