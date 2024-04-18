@@ -35,6 +35,33 @@ tabs:
               type: template
               display: Template
               localizable: true
+          -
+            handle: bande_defilante
+            field:
+              default: false
+              type: toggle
+              display: 'bande défilante'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: texte_defilant
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'texte défilant'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                bande_defilante: 'equals true'
   carousel:
     display: Carousel
     sections:

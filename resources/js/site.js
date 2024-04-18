@@ -113,4 +113,7 @@ function handleSwipe() {
 
 };
 
+
 document.addEventListener("DOMContentLoaded", initApp);
+
+

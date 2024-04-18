@@ -1,9 +1,29 @@
-<div class="w-full min-h-full flex justify-center bg-blue-200">
-    <div class="relative overflow-hidden h-20">
-        <div class="absolute whitespace-nowrap animate-marquee">
-            <span class="block py-2 px-6 text-lg text-white bg-red-50">Your text here</span>
-        </div>
+<div class="w-full min-h-full">
+    {{if bande_defilante }}
+    <div class="w-full inline-flex flex-nowrap whitespace-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_100px,_black_calc(92%),transparent_100%)] parent-container [font-size:_clamp(1rem,3vw,6vw)] [padding:0.7em] bg-white text-[#292F36]">
+        <ul class="flex items-center justify-end [&_li]:mx-8 animate-infinite-scroll">
+            <li>
+                <p>{{ texte_defilant }}</p>
+            </li>
+            <li>
+                <p>{{ texte_defilant }}</p>
+            </li>
+            <li>
+                <p>{{ texte_defilant }}</p>
+            </li>
+        </ul>                
+        <ul class="flex items-center justify-end [&_li]:mx-8 animate-infinite-scroll">
+            <li>
+                <p>{{ texte_defilant }}</p>
+            </li>
+            <li>
+                <p>{{ texte_defilant }}</p>
+            </li>
+            <li>
+                <p>{{ texte_defilant }}</p>
+            </li>
+        </ul>                
     </div>
-
+    {{ /if }}
     {{ partial:carousel }}
 </div>
