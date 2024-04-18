@@ -7,7 +7,7 @@
         <title>{{ title ?? site:name }}</title>
         <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon_entrepot.jpg">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-        {{ vite src="resources/js/site.js|resources/css/site.css" }}
+        {{ vite src="resources/js/site.js|resources/js/gsap.min.js|resources/css/site.css" }}
     </head>
 
     <body class="bg-[#fbf8f3] font-sora leading-normal">
@@ -16,8 +16,22 @@
             {{ partial:header }}
         </header>
 
-        <main class="w-full lg:min-h-screen flex justify-center">
+        <main>
             {{ template_content }}
         </main>
+
+        <div class="box h-20 w-20 bg-green-500" >few</div>
+
+        <script src="/gsap.min.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                console.log('DOM fully loaded and parsed');
+                gsap.to('.box', {
+                    rotation: 860,
+                    duration: 8,
+                })
+            });
+        </script>
     </body>
 </html>

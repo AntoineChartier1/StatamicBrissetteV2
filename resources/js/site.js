@@ -69,7 +69,6 @@ $prevButton.addEventListener('click', () => {
     if (!isTransitioning) {
         isTransitioning = true;
         carousel.prev();
-        console.log('prev');
         setTimeout(() => {
             isTransitioning = false;
         }, 300); // Replace 300 with your transition duration
@@ -110,6 +109,7 @@ function handleSwipe() {
         carousel.prev();
     }
 }
+
 
 };
 

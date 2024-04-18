@@ -21,7 +21,7 @@ grid_field:
           -
             type: text
             text: " à la location d’une nouvelle unité d’entreposage.\_"
-    assets_field: hero3.webp
+    assets_field: hero.webp
     bouton: true
     btn_txt: 'En savoir plus'
     btn_url: www.google.com
@@ -101,5 +101,5 @@ grid_field:
     bouton: false
     couleur_bg: bg-vert
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1713449019
+updated_at: 1713449673
 ---
