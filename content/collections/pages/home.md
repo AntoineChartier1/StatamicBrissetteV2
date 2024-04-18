@@ -5,7 +5,7 @@ title: Home
 template: home
 author: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1713391925
+updated_at: 1713448294
 carousel:
   -
     id: lv46klkg
@@ -323,6 +323,10 @@ grid_field:
     courleur_bg: bg-vert
     couleur_bg: bg-vert
     bouton: false
+collections_field:
+  - carousel_entre
+entries_field:
+  - 1194658a-fcd2-452c-ac11-eb7ce7b9640b
 ---
 ## Welcome to your brand new Setup Statamic ROUGE!
 
