@@ -1,0 +1,106 @@
+
+<section class="w-full h-full md:[padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)] px-0 py-2" >
+    <div class="[padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)] bg-white">
+        <h1 class="[font-size:_clamp(2em,3vw,4vw)] [margin-bottom:_clamp(0.5em,0.5vw,1vw)] text-center font-bold text-rougeBrissette" >J'ai besoin d'entreposer</h1>
+        <form>            
+            <select class="[font-size:_clamp(1em,1.4vw,3vw)] w-full border whitespace-normal text-center md:text-left border-gray-300 py-2 px-4 md:py-4 md:px-5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 [margin-bottom:_clamp(1em,0.8vw,1vw)]" onchange="updateInformation(this.value)">
+                <option value="option1" selected>Quelques articles : 5 pieds x 5 pieds (25 pieds carrés)</option>
+                <option value="option2">Beaucoup d'articles : 5 pieds x 10 pieds (50 pieds carrés)</option>
+                <option value="option3">Quelques articles : 5 pieds x 15 pieds (75 pieds carrés)</option>
+                <option value="option4">Quelques articles : 10 pieds x 10 pieds (100 pieds carrés)</option>
+                <option value="option5">Quelques articles : 10 pieds x 15 pieds (150 pieds carrés)</option>
+                <option value="option6">Quelques articles : 10 pieds x 20 pieds (200 pieds carrés)</option>
+                <option value="option7">Quelques articles : 10 pieds x 25 pieds (250 pieds carrés)</option>
+                <option value="option8">Quelques articles : 10 pieds x 30 pieds (300 pieds carrés)</option>
+            </select>
+        </form>
+
+
+          
+
+        <script>
+            function updateInformation(value) {
+                var informationDiv = document.getElementById("information");
+                var price = "";
+                var img = "";
+
+                if (value === "option1") {
+                    titre = "Quelques articles : 5 pieds x 5 pieds (25 pieds carrés)";
+                    description = "Aménagement d'une chambre ou d'un bureau et plusieurs boîtes et petits objets OU environ 50 boîtes";
+                    price = "39,70";
+                    img = "/assets/5_5.png";
+                } else if (value === "option2") {
+                    titre = "Beaucoup d'articles : 5 pieds x 10 pieds (50 pieds carrés)";
+                    description = "Aménagement d'une chambre ou d'un bureau et plusieurs boîtes et petits objets OU environ 50 boîtes";
+                    price = "50";
+                    img = "/assets/5_10.png";
+                } else if (value === "option3") {
+                    titre = "Quelques articles : 5 pieds x 15 pieds (75 pieds carrés)";
+                    description = "Aménagement d'une chambre ou d'un bureau et plusieurs boîtes et petits objets OU environ 50 boîtes";
+                    price = "78,50";
+                    img = "/assets/5_15.png";
+                }else if (value === "option4") {
+                    titre = "Quelques articles : 5 pieds x 15 pieds (75 pieds carrés)";
+                    description = "Aménagement d'une chambre ou d'un bureau et plusieurs boîtes et petits objets OU environ 50 boîtes";
+                    price = "150,50";
+                    img = "https://via.placeholder.com/250";
+                }else if (value === "option5") {
+                    titre = "Quelques articles : 5 pieds x 15 pieds (75 pieds carrés)";
+                    description = "Aménagement d'une chambre ou d'un bureau et plusieurs boîtes et petits objets OU environ 50 boîtes";
+                    price = "644,99";
+                    img = "https://via.placeholder.com/300";
+                }
+                // Add more conditions for other options if needed
+
+                informationDiv.innerHTML = `
+                <div class="[margin:_clamp(0.5em,6.5vw,8vw)0] md:flex md:gap-10">
+                    <div class="md:w-1/2">
+                        <h1 class="[font-size:_clamp(1.8em,2.5vw,4vw)] mb-3 text-center">${titre} </h1>
+                        <p class="[font-size:_clamp(1em,1.5vw,4vw)] mb-5 text-center">${description} </p>
+                        <p class="[font-size:_clamp(1.2em,1.5vw,4vw)] mb-3 text-center ">À partir de <strong class="[font-size:_clamp(2em,2vw,4.5vw)] text-rougeBrissette">${price} $</strong>/mois</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img class="h-full min-w-[65%] object-contain m-auto md:mx-0 md:ml-auto" src="${img}" alt="">
+                        <p class="text-center whitespace-nowrap md:text-right md:mt-3">
+                            <a href="{{btn_url}}" class="[font-size:_clamp(1.5em,1em,4em)] w-full md:w-auto self-start inline-flex items-center justify-center text-center rounded-2xl font-semibold bg-rougeBrissette text-white py-2 px-1.5 md:py-4 md:px-10 ">
+                                Réserver une unité &nbsp;
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                                    <path d="M1 7.93536L14.7232 7.79851M9.61818 1.41132L16.1412 7.9343L9.48677 14.5887" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            `;
+            }
+        </script>
+
+
+        <div id="information">
+            <!-- Displayed information will be updated here -->
+            <div class="[margin:_clamp(0.5em,6.5vw,8vw)0_clamp(0.2em,1vw,8vw)] md:flex md:gap-10">
+                <div class="md:w-1/2">
+                    <h1 class="[font-size:_clamp(1.8em,2.5vw,4vw)] mb-3 text-center">Quelques articles : 5 pieds x 5 pieds (25 pi<sup>2</sup>)</h1>
+                    <p class="[font-size:_clamp(1em,1.5vw,4vw)] mb-5 text-center">Aménagement d'une chambre ou d'un bureau et plusieurs boîtes et petits objets OU environ 50 boîtes</p>
+                    <p class="[font-size:_clamp(1.2em,1.5vw,4vw)] mb-3 text-center text-pretty ">À partir de <strong class="[font-size:_clamp(2em,2vw,4.5vw)] text-rougeBrissette">39,70 $</strong>/mois</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img class="max-h-full min-w-[65%] object-contain m-auto md:mx-0 md:ml-auto" src="/assets/5_5.png" alt="">
+                    <p class="text-center whitespace-nowrap md:text-right mt-3">
+                        <a href="{{btn_url}}" class="[font-size:_clamp(1.5em,1em,4em)] w-full md:w-auto self-start inline-flex items-center justify-center text-center rounded-2xl font-semibold bg-rougeBrissette text-white py-2 px-1.5 md:py-4 md:px-10 ">
+                            Réserver une unité &nbsp;
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                                <path d="M1 7.93536L14.7232 7.79851M9.61818 1.41132L16.1412 7.9343L9.48677 14.5887" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+
+    </div>
+</section>
