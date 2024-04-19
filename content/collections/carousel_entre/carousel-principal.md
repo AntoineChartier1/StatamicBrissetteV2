@@ -44,11 +44,11 @@ grid_field:
           -
             type: text
             text: " supplémentaire sur vos espaces de rangement jusqu’au 30\_avril 2024."
-    assets_field: hero3.webp
     bouton: true
     btn_txt: 'En savoir plus'
     btn_url: www.google.com
     couleur_bg: bg-rougeBrissette
+    assets_field: hero3.webp
   -
     id: lv5acto2
     bard_field:
@@ -97,9 +97,9 @@ grid_field:
                   -
                     type: text
                     text: 'Tondeuse à batterie'
-    assets_field: hero2-2.webp
     bouton: false
     couleur_bg: bg-vert
+    assets_field: hero2-2.webp
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1713550370
+updated_at: 1713555659
 ---
