@@ -36,3 +36,11 @@
 {
     @apply [font-size:0.6em] list-disc [padding-left:1.6em] [padding-top:0.5em];
 }
+
+
+
+
+.tableau td
+{
+    @apply p-[10%] md:p-[5%];
+}

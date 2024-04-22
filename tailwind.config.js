@@ -14,6 +14,7 @@ export default {
             colors: {
                 rougeBrissette: "#e73b44",
                 vert: "#396b2a",
+                dore: "#D0B787",
             },
             fontFamily: {
                 sora: ["Sora", "sans-serif"],
