@@ -10,3 +10,8 @@ preferences:
     -
       name: 'Home ‹ Pages ‹ Collections'
       url: collections/pages/entries/home
+  assets:
+    assets:
+      mode: grid
+    plan_formulaire:
+      mode: grid
