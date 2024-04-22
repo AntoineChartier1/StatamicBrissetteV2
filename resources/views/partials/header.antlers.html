@@ -1,6 +1,6 @@
         <!-- top bar -->
         
-        <section class="w-full h-20 bg-rougeBrissette flex justify-center">
+        <section class="w-full h-20 bg-rougeBrissette flex justify-center ">
             <div class="h-full w-full px-6">
                 <!-- mobile  -->
                 <div class="h-full flex flex-col justify-center md:hidden">
@@ -33,24 +33,29 @@
                     >
                     <nav
                         aria-label="mobile-menu"
-                        class="flex flex-col items-center py-8 "
+                        class="flex flex-col items-center py-24 text-white gap-6 [font-size:_clamp(0.6em,7.5vw,8vw)]"
                     >
                         <a
                             href="#"
-                            class="p-3 text-center hover:text-yellow-200"
+                            class="p-3 my-7 text-center border-2"
                             >Mon compte</a
                         >
                         {{ nav from="pages" }}
                         <a
                             href="{{ url }}"
-                            class="p-3 text-center hover:text-yellow-200"
+                            class="p-3 text-center"
                             >{{ title }}</a
                         >
                         {{ /nav }}
                         <a
                             href="#"
-                            class="p-3 text-center hover:text-yellow-200"
+                            class="p-3 text-center"
                             >EN</a
+                        >
+                        <a
+                            href="#"
+                            class="p-3 text-center"
+                            >f</a
                         >
                     </nav>
                 </div>
