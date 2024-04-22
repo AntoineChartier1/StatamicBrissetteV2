@@ -25,9 +25,10 @@
                 <div class="w-1/2">
                     <!-- Second element goes here -->
                     <img
-                        src="{{ glide src="{{assets_field}}" fit="crop_focal"}}"
-                        class="w-full h-full object-cover"
+                        src="{{ glide :src='assets_field'}}"
+                        class="w-full h-full object-cover object-top"
                         alt="{{assets_field.alt}}"
+                        loading="lazy"
                     />
                 </div>
             </div>
