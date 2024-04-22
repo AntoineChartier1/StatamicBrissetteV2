@@ -4,29 +4,6 @@ blueprint: carousel_fields
 title: 'carousel principal'
 grid_field:
   -
-    id: lv5acd2q
-    bard_field:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Obtenez '
-          -
-            type: text
-            marks:
-              -
-                type: bold
-            text: "20\_% de rabais"
-          -
-            type: text
-            text: " supplémentaire sur vos espaces de rangement jusqu’au 30\_avril 2024."
-    bouton: true
-    btn_txt: 'En savoir plus'
-    btn_url: www.google.com
-    couleur_bg: bg-rougeBrissette
-    assets_field: hero3.webp
-  -
     id: lv5abr0f
     bard_field:
       -
@@ -49,6 +26,29 @@ grid_field:
     btn_txt: 'En savoir plus'
     btn_url: www.google.com
     couleur_bg: bg-rougeBrissette
+  -
+    id: lv5acd2q
+    bard_field:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Obtenez '
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: "20\_% de rabais"
+          -
+            type: text
+            text: " supplémentaire sur vos espaces de rangement jusqu’au 30\_avril 2024."
+    bouton: true
+    btn_txt: 'En savoir plus'
+    btn_url: www.google.com
+    couleur_bg: bg-rougeBrissette
+    assets_field: hero3.webp
   -
     id: lv5acto2
     bard_field:
@@ -101,5 +101,5 @@ grid_field:
     couleur_bg: bg-vert
     assets_field: hero2-2.webp
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1713799575
+updated_at: 1713810213
 ---
