@@ -42,12 +42,12 @@
     &:hover
     {
         @apply shadow-md opacity-80; 
-        svg
+        :is(svg)
         {
             @apply transform scale-110 translate-x-1;
         }
     }
-    svg
+    :is(svg)
     {
         @apply h-4 w-4 sm:w-fit sm:h-fit ;
     }
