@@ -33,7 +33,7 @@ export default {
             },
             animation: {
                 "open-menu": "open-menu 0.3s ease-in-out forwards",
-                "infinite-scroll": "infinite-scroll 35s linear infinite",
+                "infinite-scroll": "infinite-scroll 60s linear infinite",
             },
         },
     },
