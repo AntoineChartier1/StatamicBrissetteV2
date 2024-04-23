@@ -60,4 +60,76 @@
     @apply p-[10%] md:p-[5%];
 }
 
+.grid-cell-r {
+    position: relative;
+  }
+  
+  .grid-cell-r::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Or any width you want for the border */
+    background: #D0B787; /* Or any color you want for the border */
+  }
 
+
+.grid-cell-l {
+    position: relative;
+  }
+  
+  .grid-cell-l::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    width: 2px; /* Or any width you want for the border */
+    background: #D0B787; /* Or any color you want for the border */
+  }
+
+
+  @media (min-width: 768px) { /* corresponds to 'md' in Tailwind */
+    .lg-grid-cell-r {
+        position: relative;
+      }
+      
+      .lg-grid-cell-r::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px; /* Or any width you want for the border */
+        background: #D0B787; /* Or any color you want for the border */
+      }
+  }
+  @media (max-width: 767px) { /* corresponds to 'md' in Tailwind */
+    .grid-cell-t {
+        position: relative;
+      }
+      
+      .grid-cell-t::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -1px;
+        height: 2px; /* Or any width you want for the border */
+        background: #D0B787; /* Or any color you want for the border */
+      }
+      .grid-cell-b {
+        position: relative;
+      }
+      
+      .grid-cell-b::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 2px; /* Or any width you want for the border */
+        background: #D0B787; /* Or any color you want for the border */
+      } 
+}
