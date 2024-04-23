@@ -92,4 +92,33 @@ document.addEventListener("DOMContentLoaded", (event) => {
             carousel.prev();
         }
     }
+
+    let isDragging = false;
+    let startPos = 0;
+    let currentPos = 0;
+
+    carouselElement.addEventListener("mousedown", (event) => {
+        isDragging = true;
+        startPos = event.clientX;
+    });
+
+    carouselElement.addEventListener("mousemove", (event) => {
+        if (!isDragging) return;
+        currentPos = event.clientX;
+        const diff = startPos - currentPos;
+
+        // Change slide if mouse moved more than 100px
+        // Adjust this value based on your needs
+        if (diff > 100) {
+            carousel.next();
+            isDragging = false;
+        } else if (diff < -100) {
+            carousel.prev();
+            isDragging = false;
+        }
+    });
+
+    carouselElement.addEventListener("mouseup", () => {
+        isDragging = false;
+    });
 });

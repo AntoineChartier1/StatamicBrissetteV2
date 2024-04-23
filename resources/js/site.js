@@ -10,21 +10,13 @@ const initApp = () => {
     const toggleMenu = () => {
         mobileMenu.classList.toggle("hidden");
         body.classList.toggle("overflow-hidden"); // 
-        // body.style.overflow = 'hidden';
-        // mobileMenu.classList.toggle("flex");
         hamburgerBtn.classList.toggle("toggle-btn");
     };
 
     hamburgerBtn.addEventListener("click", toggleMenu);
     mobileMenu.addEventListener("click", toggleMenu); // close when clicking outside any links
 
-
-
     
-
-
-
-
 };
 
 
