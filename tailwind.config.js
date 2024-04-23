@@ -13,6 +13,7 @@ export default {
         extend: {
             colors: {
                 rougeBrissette: "#e73b44",
+                noir: "#222",
                 vert: "#396b2a",
                 dore: "#D0B787",
             },
