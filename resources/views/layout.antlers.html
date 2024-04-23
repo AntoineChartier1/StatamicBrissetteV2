@@ -10,23 +10,23 @@
         {{ vite src="resources/js/site.js|resources/js/gsapAnim.js|resources/css/site.css" }}
     </head>
 
-    <body class="h-full flex flex-col bg-[#fbf8f3] font-sora">
+    <body class=" bg-[#fbf8f3] font-sora">
 
-        <header class="flex flex-col flex-none">
+        <header>
             {{ partial:header }}
         </header>
 
         {{# <div class="box h-20 w-20 bg-green-500" >few</div> #}}
 
-        <main class="flex flex-[1] h-full">
+        <main>
             {{ template_content }}
         </main>
 
         {{# // footer #}}
-        <footer class="flex flex-none">
+        <footer>
             <div class="w-full bg-noir p-[_clamp(0.9em,6vw,6vw)_clamp(0.9em,6vw,6vw)]">
 
-                <div class=" w-fit text-white">
+                <div class="w-fit text-white">
                     <svg  viewBox="0 0 259 75" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_272_1428)">
                         <path d="M48.0803 43.0956V25.3451H41.0463V16.9116C41.0463 7.58567 33.4202 0 24.0446 0C14.669 0 7.03395 7.58567 7.03395 16.9116V25.3451H0V74.5716H48.0803V57.9902H40.5439V67.0663H7.53637V32.8415H40.5439V43.0866H48.0803V43.0956ZM14.5793 16.9116C14.5793 11.7176 18.823 7.49643 24.0446 7.49643C29.2662 7.49643 33.5099 11.7176 33.5099 16.9116V25.3451H14.5793V16.9116Z" fill="#F5333F"/>
