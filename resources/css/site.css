@@ -37,10 +37,27 @@
     @apply [font-size:0.6em] list-disc [padding-left:1.6em] [padding-top:0.5em];
 }
 
+.bouton{
+    @apply inline-flex whitespace-nowrap overflow-hidden justify-center self-start items-center text-center px-3 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold bg-white [font-size:_clamp(0.85em,1.5vw,2vw)];
+    &:hover
+    {
+        @apply bg-gray-100;
+        svg
+        {
+            @apply transform scale-110 translate-x-1;
+        }
+    }
+    svg
+    {
+        @apply h-4 w-4 sm:w-fit sm:h-fit ;
+    }
+}
 
-
+/* self-start inline-flex items-center justify-center text-center rounded-2xl font-semibold bg-white py-2 px-1.5 md:py-4 md:px-9 xl:py-6 xl:px-12 xl:text-2xl  */
 
 .tableau td
 {
     @apply p-[10%] md:p-[5%];
 }
+
+
