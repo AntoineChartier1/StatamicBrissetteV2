@@ -1,0 +1,30 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: nom
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: nom
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: telephone
+            field:
+              input_type: tel
+              antlers: false
+              type: text
+              display: telephone
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
