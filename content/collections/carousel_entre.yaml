@@ -1,4 +1,8 @@
 title: carousels
+sites:
+  - default
+  - anglais
+propagate: false
 template: default
 layout: layout
 revisions: false

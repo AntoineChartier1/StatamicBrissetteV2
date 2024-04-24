@@ -1,11 +1,11 @@
 ---
 id: home
 blueprint: pages
-title: Home
+title: Accueil
 template: home
 author: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1713982048
+updated_at: 1713989735
 carousel:
   -
     id: lv46klkg
