@@ -15,10 +15,16 @@ return [
 
     'sites' => [
 
-        'default' => [
+        'original' => [
             'name' => config('app.name'),
-            'locale' => 'en_US',
+            'locale' => 'fr_CA',
             'url' => '/',
+        ],
+
+        'anglais' => [
+            'name' => config('app.name') . ' - English',
+            'locale' => 'en_US',
+            'url' => '/en',
         ],
 
     ],
