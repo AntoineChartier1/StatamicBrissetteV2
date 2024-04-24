@@ -1,4 +1,4 @@
-title: 'carousel fields'
+title: carousel
 tabs:
   main:
     display: Main
@@ -14,14 +14,3 @@ tabs:
                 - required
           -
             import: carousel_set
-  sidebar:
-    display: Sidebar
-    sections:
-      -
-        fields:
-          -
-            handle: slug
-            field:
-              type: slug
-              localizable: true
-              validate: 'max:200'

@@ -1,6 +1,5 @@
 // This is all you.
-// Import the Carousel class from Flowbite
-import { Carousel } from 'flowbite';
+
 
 const initApp = () => {
     const body = document.body;
