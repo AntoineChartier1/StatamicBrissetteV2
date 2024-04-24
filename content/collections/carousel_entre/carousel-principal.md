@@ -101,7 +101,7 @@ grid_field:
     couleur_bg: bg-vert
     assets_field: hero2-2.webp
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1713983703
+updated_at: 1713984011
 champs:
   -
     id: lve4qvu7
@@ -240,14 +240,17 @@ champs:
             type: text
             text: 'Nous faisons notre part pour préserver l’environnement.'
       -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Site web à haute efficacité énergétique et à faibles émissions de carbone'
-      -
         type: bulletList
         content:
+          -
+            type: listItem
+            content:
+              -
+                type: paragraph
+                content:
+                  -
+                    type: text
+                    text: 'Site web à haute efficacité énergétique et à faibles émissions de carbone'
           -
             type: listItem
             content:
