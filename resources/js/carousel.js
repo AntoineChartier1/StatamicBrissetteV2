@@ -1,124 +1,72 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-    // Get the carousel element
-    const carouselElement = document.getElementById("carousel-example");
 
-    // Get the carousel items
-    const carouselItems = document.querySelectorAll("[data-carousel-item]");
+    const wrapper = document.querySelector(".wrapper");
+    const carousel = document.querySelector(".carousel");
+    const arrowBtns = document.querySelectorAll(".wrapper button");
+    const carouselChildrens = [...carousel.children]
+    
 
-    const items = Array.from(carouselItems).map((el, index) => {
-        return {
-            position: index,
-            el: el,
-        };
+    let isDragging = false, startX, startScrollLeft, timeoutId;
+
+    let slidePerView = 1;
+
+    carouselChildrens.slice(-slidePerView).reverse().forEach((slide) => {
+        carousel.insertAdjacentHTML("afterbegin", slide.outerHTML);
     });
-    // const items = [
-    //     {
-    //         position: 0,
-    //         el: document.getElementById('carousel-item-1'),
-    //     },
-    //     {
-    //         position: 1,
-    //         el: document.getElementById('carousel-item-2'),
-    //     },
-    //     {
-    //         position: 2,
-    //         el: document.getElementById('carousel-item-3'),
-    //     },
-    //     // Add more items as needed...
-    // ];
+    carouselChildrens.slice(0, slidePerView).forEach((slide) => {
+        carousel.insertAdjacentHTML("beforeend", slide.outerHTML);
+    });
 
-    // Set the options
-    const options = {
-        // Add your options here...
-        interval: 6000, // interval pour le carousel automatique (static / slide)
+
+    // Add event listeners to the arrow buttons to scroll the carousel left and right
+    arrowBtns.forEach(btn => {
+        btn.addEventListener("click", () => {  
+           carousel.scrollLeft += btn.id === "left" ? -carousel.querySelector(".slide").offsetWidth : carousel.querySelector(".slide").offsetWidth;
+        });
+    });
+
+    const dragStart = (e) => {
+        isDragging = true;
+        carousel.classList.add("dragging");
+        startX = e.pageX;
+        startScrollLeft = carousel.scrollLeft;
+    }
+
+    const dragging = (e) => {
+        if (!isDragging) return;
+        carousel.scrollLeft = startScrollLeft - (e.pageX -startX);
     };
 
-    // Create the carousel
-    const carousel = new Carousel(carouselElement, items, options);
+    const dragStop = (e) => {
+        isDragging = false;
+        carousel.classList.remove("dragging");
+    };
 
-    // Add event listeners for the next and previous buttons
-    const $prevButton = document.getElementById("data-carousel-prev");
-    const $nextButton = document.getElementById("data-carousel-next");
+    const autoPlay = () => {
+        if(window.innerWidth < 800) return;
+        timeoutId = setTimeout(() => carousel.scrollLeft += carousel.querySelector(".slide").offsetWidth, 2500);
+    }
+    autoPlay();
 
-    let isTransitioning = false;
-
-    $prevButton.addEventListener("click", () => {
-        if (!isTransitioning) {
-            isTransitioning = true;
-            carousel.prev();
-            setTimeout(() => {
-                isTransitioning = false;
-            }, 300); // Replace 300 with your transition duration
-        }
-    });
-
-    $nextButton.addEventListener("click", () => {
-        if (!isTransitioning) {
-            isTransitioning = true;
-            carousel.next();
-            setTimeout(() => {
-                isTransitioning = false;
-            }, 300); // Replace 300 with your transition duration
-        }
-    });
-
-    // Add touch event listeners for swipe gestures
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    carouselElement.addEventListener(
-        "touchstart",
-        (event) => {
-            touchStartX = event.changedTouches[0].screenX;
-        },
-        false
-    );
-
-    carouselElement.addEventListener(
-        "touchend",
-        (event) => {
-            touchEndX = event.changedTouches[0].screenX;
-            handleSwipe();
-        },
-        false
-    );
-
-    function handleSwipe() {
-        if (touchEndX < touchStartX) {
-            carousel.next();
-        }
-
-        if (touchEndX > touchStartX) {
-            carousel.prev();
+    const infiniteScroll = () => {
+        if(carousel.scrollLeft === 0) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.scrollWidth - ( 2 * carousel.offsetWidth);
+            carousel.classList.remove("no-transition");
+        } else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.offsetWidth;
+            carousel.classList.remove("no-transition");
         }
     }
 
-    let isDragging = false;
-    let startPos = 0;
-    let currentPos = 0;
+    clearTimeout(timeoutId);
+    if(!wrapper.matches(":hover")) autoPlay();
 
-    carouselElement.addEventListener("mousedown", (event) => {
-        isDragging = true;
-        startPos = event.clientX;
-    });
-
-    carouselElement.addEventListener("mousemove", (event) => {
-        if (!isDragging) return;
-        currentPos = event.clientX;
-        const diff = startPos - currentPos;
-
-        // Change slide if mouse moved more than 100px
-        // Adjust this value based on your needs
-        if (diff > 100) {
-            carousel.next();
-            isDragging = false;
-        } else if (diff < -100) {
-            carousel.prev();
-            isDragging = false;
-        }
-    });
-
-    carouselElement.addEventListener("mouseup", () => {
-        isDragging = false;
-    });
+    carousel.addEventListener("mousedown", dragStart);
+    carousel.addEventListener("mousemove", dragging);
+    document.addEventListener("mouseup", dragStop);
+    carousel.addEventListener("scroll", infiniteScroll);
+    wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+    wrapper.addEventListener("mouseleave", autoPlay);
 });

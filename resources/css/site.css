@@ -30,6 +30,36 @@
     animation-play-state: paused;
 }
 
+.wrapper .carousel{
+    /* height: 50vw; */
+    scrollbar-width: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+.wrapper .carousel.no-transition{
+    scroll-behavior: auto;
+
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .slide {
+  height: 100%;
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel .slide{
+  height: 100%;
+  scroll-snap-align: start;
+} 
 
 /* liste texte dans le carousel */
 .font-ul ul
