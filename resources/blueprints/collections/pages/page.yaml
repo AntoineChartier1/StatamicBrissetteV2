@@ -12,6 +12,7 @@ tabs:
               required: true
               validate:
                 - required
+              localizable: true
           -
             handle: assets_field
             field:
@@ -29,12 +30,13 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+              localizable: true
           -
             handle: template
             field:
               type: template
               display: Template
-              localizable: true
+              localizable: false
           -
             handle: bande_defilante
             field:
@@ -47,6 +49,7 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+              localizable: true
           -
             handle: texte_defilant
             field:
@@ -62,6 +65,7 @@ tabs:
               hide_display: false
               if:
                 bande_defilante: 'equals true'
+              localizable: true
   carousel:
     display: Carousel
     sections:
@@ -83,6 +87,7 @@ tabs:
               replicator_preview: true
               hide_display: false
               max_items: 1
+              localizable: true
   sidebar:
     display: Sidebar
     sections:
