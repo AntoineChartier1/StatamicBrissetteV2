@@ -1,85 +1,139 @@
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"></noscript>
+
 {{ vite src="resources/js/carousel.js" }}
 
 
 
-<section id="carousel-example" class="relative w-full h-fit" data-carousel="static">
+<section>
     <!-- Carousel wrapper -->
-    <div
-    class="relative overflow-hidden [height:_clamp(20em,40vw,40vw)]"
-    >
-    <!-- Item 1 -->
-    {{ entries_field }}
-        {{ grid_field }}
-        <div id="carousel-item-{{index}}" class=" hidden duration-200 ease-linear" data-carousel-item>
-            <div class="flex h-full">
-                <div class="w-1/2">
-                    <!-- First element goes here -->
-                    <div class="flex flex-col justify-between h-full [padding:_clamp(0.9em,8vw,8vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)] {{couleur_bg}} ">
-                        <div class="[font-size:_clamp(0.9em,2.2vw,6vw)] font-ul text-pretty text-white"> {{bard_field}}  </div>
-                        {{ if bouton }}
-                            <a href="{{btn_url}}" class="bouton bg-white">
-                                {{btn_txt}} &nbsp;
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
-                                    <path d="M1 7.93536L14.7232 7.79851M9.61818 1.41132L16.1412 7.9343L9.48677 14.5887" stroke="#292F36" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        {{ /if }}
+    <div class="wrapper w-full">
+        <ul class="carousel grid grid-flow-col auto-cols-[100%] gap-5 overflow-hidden">
+            <!-- Item 1 -->
+            <li class="slide">
+                <div id="" class="" >
+                    <div class="flex h-full">
+                        <div class="w-1/2">
+                            <!-- First element goes here -->
+                            <div class="flex flex-col justify-between h-full [padding:_clamp(0.9em,8vw,8vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)] bg-rougeBrissette ">
+                                <div class="[font-size:_clamp(0.9em,2.2vw,6vw)] font-ul text-pretty text-white"> grejgrnje </div>
+
+                                    <a href="#" class="bouton bg-white">
+                                        en savoir plus &nbsp;
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                                            <path d="M1 7.93536L14.7232 7.79851M9.61818 1.41132L16.1412 7.9343L9.48677 14.5887" stroke="#292F36" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+
+                            </div>
+                        </div>
+                        <div class="w-1/2 img">
+                            <!-- Second element goes here -->
+                            <img
+                                src="https://via.placeholder.com/500"
+                                class="w-full h-full object-cover object-top"
+                                alt="{{assets_field.alt}}"
+                                loading="lazy"
+                                draggable="false"
+                            />
+                        </div>
                     </div>
                 </div>
-                <div class="w-1/2">
-                    <!-- Second element goes here -->
-                    <img
-                        src="{{ glide :src='assets_field'}}"
-                        class="w-full h-full object-cover object-top"
-                        alt="{{assets_field.alt}}"
-                        loading="lazy"
-                    />
+            </li>
+            <!-- Item 2 -->
+            <li class="slide">
+                <div id="" class="" >
+                    <div class="flex h-full">
+                        <div class="w-1/2">
+                            <!-- First element goes here -->
+                            <div class="flex flex-col justify-between h-full [padding:_clamp(0.9em,8vw,8vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)] bg-rougeBrissette ">
+                                <div class="[font-size:_clamp(0.9em,2.2vw,6vw)] font-ul text-pretty text-white"> grejgrnje </div>
+
+                                    <a href="#" class="bouton bg-white">
+                                        en savoir plus &nbsp;
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                                            <path d="M1 7.93536L14.7232 7.79851M9.61818 1.41132L16.1412 7.9343L9.48677 14.5887" stroke="#292F36" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+
+                            </div>
+                        </div>
+                        <div class="w-1/2 img">
+                            <!-- Second element goes here -->
+                            <img
+                                src="https://via.placeholder.com/200"
+                                class="w-full h-full object-cover object-top"
+                                alt="{{assets_field.alt}}"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        {{ /grid_field }}
-    {{ /entries_field }}
+            </li>
+            <!-- Item 2 -->
+            <li class="slide">
+                <div id="" class="" >
+                    <div class="flex h-full">
+                        <div class="w-1/2">
+                            <!-- First element goes here -->
+                            <div class="flex flex-col justify-between h-full [padding:_clamp(0.9em,8vw,8vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)] {{couleur_bg}} ">
+                                <div class="[font-size:_clamp(0.9em,2.2vw,6vw)] font-ul text-pretty text-white"> grejgrnje </div>
+
+                                    <a href="#" class="bouton bg-white">
+                                        en savoir plus &nbsp;
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                                            <path d="M1 7.93536L14.7232 7.79851M9.61818 1.41132L16.1412 7.9343L9.48677 14.5887" stroke="#292F36" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+
+                            </div>
+                        </div>
+                        <div class="w-1/2 img">
+                            <!-- Second element goes here -->
+                            <img
+                                src="https://via.placeholder.com/200"
+                                class="w-full h-full object-cover object-top"
+                                alt="{{assets_field.alt}}"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- Item 2 -->
+            <li class="slide">
+                <div id="" class="" >
+                    <div class="flex h-full">
+                        <div class="w-1/2">
+                            <!-- First element goes here -->
+                            <div class="flex flex-col justify-between h-full [padding:_clamp(0.9em,8vw,8vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)] {{couleur_bg}} ">
+                                <div class="[font-size:_clamp(0.9em,2.2vw,6vw)] font-ul text-pretty text-white"> grejgrnje </div>
+
+                                    <a href="#" class="bouton bg-white">
+                                        en savoir plus &nbsp;
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                                            <path d="M1 7.93536L14.7232 7.79851M9.61818 1.41132L16.1412 7.9343L9.48677 14.5887" stroke="#292F36" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+
+                            </div>
+                        </div>
+                        <div class="w-1/2 img">
+                            <!-- Second element goes here -->
+                            <img
+                                src="https://via.placeholder.com/200"
+                                class="w-full h-full object-cover object-top"
+                                alt="{{assets_field.alt}}"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
 
     </div>
-    <!-- Slider indicators -->
-    <!-- <div
-        class="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse"
-    >
-        <button
-            id="carousel-indicator-1"
-            type="button"
-            class="h-3 w-3 rounded-full bg-blue-800"
-            aria-current="true"
-            aria-label="Slide 1"
-        ></button>
-        <button
-            id="carousel-indicator-2"
-            type="button"
-            class="h-3 w-3 rounded-full bg-blue-800"
-            aria-current="false"
-            aria-label="Slide 2"
-        ></button>
-        <button
-            id="carousel-indicator-3"
-            type="button"
-            class="h-3 w-3 rounded-full bg-blue-800"
-            aria-current="false"
-            aria-label="Slide 3"
-        ></button>
-        <button
-            id="carousel-indicator-4"
-            type="button"
-            class="h-3 w-3 rounded-full bg-blue-800"
-            aria-current="false"
-            aria-label="Slide 4"
-        ></button>
-    </div> -->
+
     <!-- Slider controls -->
-    <button
-        id="data-carousel-prev"
-        type="button"
+    <button type="button"
         class="hidden group absolute left-1/2 transform -translate-x-24 bottom-[_clamp(0.9em,2.7vw,6vw)] z-30 md:flex cursor-pointer items-end"
     >
         <span
@@ -120,3 +174,45 @@
         </span>
     </button>
 </section>
+
+
+{{# 
+
+    <!-- Carousel wrapper -->
+    <div
+    class="relative [height:_clamp(20em,40vw,40vw)]"
+    >
+    <!-- Item 1 -->
+    {{ entries_field }}
+        {{ grid_field }}
+        <div id="carousel-item-{{index}}" class=" hidden duration-200 ease-linear" data-carousel-item>
+            <div class="flex h-full">
+                <div class="w-1/2">
+                    <!-- First element goes here -->
+                    <div class="flex flex-col justify-between h-full [padding:_clamp(0.9em,8vw,8vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)] {{couleur_bg}} ">
+                        <div class="[font-size:_clamp(0.9em,2.2vw,6vw)] font-ul text-pretty text-white"> {{bard_field}}  </div>
+                        {{ if bouton }}
+                            <a href="{{btn_url}}" class="bouton bg-white">
+                                {{btn_txt}} &nbsp;
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                                    <path d="M1 7.93536L14.7232 7.79851M9.61818 1.41132L16.1412 7.9343L9.48677 14.5887" stroke="#292F36" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        {{ /if }}
+                    </div>
+                </div>
+                <div class="w-1/2">
+                    <!-- Second element goes here -->
+                    <img
+                        src="{{ glide :src='assets_field'}}"
+                        class="w-full h-full object-cover object-top"
+                        alt="{{assets_field.alt}}"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </div>
+        {{ /grid_field }}
+    {{ /entries_field }} 
+    
+    #}}

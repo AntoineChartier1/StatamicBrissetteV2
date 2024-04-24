@@ -31,6 +31,11 @@
 }
 
 
+.carousel.dragging .slide {
+  cursor: grab;
+  user-select: none;
+}
+
 /* liste texte dans le carousel */
 .font-ul ul
 {
