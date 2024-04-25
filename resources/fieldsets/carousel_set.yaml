@@ -129,3 +129,4 @@ fields:
       replicator_preview: true
       hide_display: false
       add_row: 'ajouter une slide'
+      localizable: true
