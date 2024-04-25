@@ -35,8 +35,8 @@ export default {
                 },
             },
             animation: {
-                "open-menu": "open-menu 0.2s cubic-bezier forwards",
-                "close-menu": "close-menu 0.2s cubic-bezier forwards",
+                "open-menu": "open-menu 0.2s ease-in-out forwards",
+                "close-menu": "close-menu 0.2s ease-in-out forwards",
                 "infinite-scroll": "infinite-scroll 60s linear infinite",
             },
         },
