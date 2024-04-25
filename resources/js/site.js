@@ -44,7 +44,6 @@ console.log(animationDuration); // Outputs the animation duration, e.g., "2s" or
             }
         }
 
-        body.classList.toggle("overflow-hidden");
         hamburgerBtn.classList.toggle("toggle-btn");
         firstClick = false;
     };
