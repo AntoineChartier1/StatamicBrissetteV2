@@ -23,8 +23,11 @@ export default {
             keyframes: {
                 "open-menu": {
                     "0%": { transform: "scaleY(0)" },
-                    "80%": { transform: "scaleY(1.2)" },
                     "100%": { transform: "scaleY(1)" },
+                },
+                "close-menu": {
+                    "0%": { transform: "scaleY(1)" },
+                    "100%": { transform: "scaleY(0)" },
                 },
                 "infinite-scroll": {
                     from: { transform: "translateX(0)" },
@@ -32,7 +35,8 @@ export default {
                 },
             },
             animation: {
-                "open-menu": "open-menu 0.3s ease-in-out forwards",
+                "open-menu": "open-menu 0.2s ease-in-out forwards",
+                "close-menu": "close-menu 0.2s ease-in-out forwards",
                 "infinite-scroll": "infinite-scroll 60s linear infinite",
             },
         },
