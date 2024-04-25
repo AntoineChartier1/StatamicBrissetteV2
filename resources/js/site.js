@@ -4,6 +4,7 @@ const initApp = () => {
     const body = document.body;
     const hamburgerBtn = document.getElementById("hamburger-button");
     const mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.classList.remove('animate-close-menu', 'animate-open-menu');
     let firstClick = true;
 
     const toggleMenu = () => {
@@ -36,6 +37,8 @@ const initApp = () => {
     };
 
     hamburgerBtn.addEventListener("click", toggleMenu);
+
+
 };
 
 document.addEventListener("DOMContentLoaded", initApp);
