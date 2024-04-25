@@ -4,33 +4,35 @@ const initApp = () => {
     const body = document.body;
     const hamburgerBtn = document.getElementById("hamburger-button");
     const mobileMenu = document.getElementById("mobile-menu");
+    let firstClick = true;
 
     const toggleMenu = () => {
         hamburgerBtn.disabled = true;
-        setTimeout(() => {
-            hamburgerBtn.disabled = false;
-        }, 200);
-        mobileMenu.classList.remove("animate-open-menu", "animate-close-menu");
         const isMenuOpen = mobileMenu.classList.contains("hidden");
 
-        const animationClass = isMenuOpen
-            ? "animate-open-menu"
-            : "animate-close-menu";
-
-        mobileMenu.classList.add(animationClass);
-
-        if (isMenuOpen) {
-            // If the menu is opening, we can immediately remove the 'hidden' class
-            mobileMenu.classList.remove("hidden");
+        if (firstClick) {
+            mobileMenu.classList.toggle("hidden");
+            hamburgerBtn.disabled = false;
+            mobileMenu.classList.toggle("animate-open-menu");
         } else {
-            // If the menu is closing, we need to wait for the animation to finish before adding the 'hidden' class
-            mobileMenu.addEventListener("animationend", () => {
-                mobileMenu.classList.add("hidden");
-            }, { once: true });
+            console.log("close");
+            mobileMenu.classList.toggle("animate-open-menu");
+            mobileMenu.classList.toggle("animate-close-menu");
+            if (!isMenuOpen) {
+                // Add a delay before toggling the 'hidden' class
+                setTimeout(() => {
+                    mobileMenu.classList.toggle("hidden");
+                    hamburgerBtn.disabled = false;
+                }, 1000); // Change this value to adjust the delay
+            } else {
+                mobileMenu.classList.toggle("hidden");
+                hamburgerBtn.disabled = false;
+            }
         }
 
         body.classList.toggle("overflow-hidden");
         hamburgerBtn.classList.toggle("toggle-btn");
+        firstClick = false;
     };
 
     hamburgerBtn.addEventListener("click", toggleMenu);
