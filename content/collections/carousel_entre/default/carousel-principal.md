@@ -101,7 +101,7 @@ grid_field:
     couleur_bg: bg-vert
     assets_field: hero2-2.webp
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1713984011
+updated_at: 1714093386
 champs:
   -
     id: lve4qvu7
@@ -123,7 +123,7 @@ champs:
             text: 'à la location d’une nouvelle unité d’entreposage.'
     assets_field: hero.webp
     bouton: true
-    btn_txt: 'en savoir plus'
+    btn_txt: 'En savoir plus'
     btn_url: fefew
     couleur_bg: bg-rougeBrissette
     text:

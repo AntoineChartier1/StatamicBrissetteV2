@@ -79,7 +79,7 @@
     }
     :is(svg)
     {
-        @apply h-4 w-4 sm:w-fit sm:h-fit ;
+        @apply w-5 h-5 sm:w-6 sm:h-6;
     }
 }
 

@@ -6,7 +6,6 @@ export default {
         "./resources/**/*.blade.php",
         "./resources/**/*.vue",
         "./content/**/*.md",
-        ".node_modules/flowbite/**/*.js",
     ],
 
     theme: {
@@ -35,11 +34,11 @@ export default {
                 },
             },
             animation: {
-                "open-menu": "open-menu 0.2s ease-in-out forwards",
-                "close-menu": "close-menu 0.2s ease-in-out forwards",
+                "open-menu": "open-menu 0.15s ease-in-out forwards",
+                "close-menu": "close-menu 0.15s ease-in-out forwards",
                 "infinite-scroll": "infinite-scroll 60s linear infinite",
             },
         },
     },
-    plugins: [require("@tailwindcss/typography"), require("flowbite/plugin")],
+    plugins: [require("@tailwindcss/typography")],
 };

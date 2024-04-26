@@ -15,8 +15,6 @@ if (animationDuration.includes('s')) {
     duration *= 1000;
 }
 
-console.log(duration); // Outputs the animation duration in milliseconds
-console.log(animationDuration); // Outputs the animation duration, e.g., "2s" or "500ms"
     mobileMenu.classList.remove('animate-close-menu', 'animate-open-menu');
     let firstClick = true;
 
