@@ -30,7 +30,7 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
-              localizable: true
+              localizable: false
           -
             handle: template
             field:
@@ -66,6 +66,24 @@ tabs:
               if:
                 bande_defilante: 'equals true'
               localizable: true
+      -
+        display: Sections
+        fields:
+          -
+            handle: section
+            field:
+              mode: default
+              create: true
+              collections:
+                - sections
+              type: entries
+              display: section
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   carousel:
     display: Carousel
     sections:

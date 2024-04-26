@@ -1,8 +1,11 @@
-
 <section class="w-full h-full [padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)]" >
-    <h1 class=" [font-size:_clamp(2em,4vw,5vw)] [margin-bottom:_clamp(0.5em,0.5vw,1vw)] text-center" >Trouvez votre unité d’entreposage</h1>
-    <p class=" [font-size:_clamp(0.9em,1.5vw,2vw)] [margin-bottom:_clamp(1em,0.8vw,1vw)] text-center" >Trouvez l’unité idéale pour tous vos besoins d’entreposage commercial ou domestique. Parcourez notre sélection d’entrepôts de 5 pi2 à 250 pi2 selon les dimensions nécessaires ou le type de biens à entreposer.</p>
+    {{collection from="sections"}}
+    <h1 class=" [font-size:_clamp(2em,4vw,5vw)] [margin-bottom:_clamp(0.5em,0.5vw,1vw)] text-center" >{{title}}</h1>
+    <p class=" [font-size:_clamp(0.9em,1.5vw,2vw)] [margin-bottom:_clamp(1em,0.8vw,1vw)] text-center" > {{texte}} </p>
     <p class="text-center">
-    {{partial:boutonCTA label="En savoir plus" btn_url="/entrepot" couleur="rouge" }}
+    {{if current_template === "home"}}
+        {{ partial:boutonCTA label="En savoir plus" btn_url="/entrepot" couleur="rouge" }}
+    {{/if}}
     </p>
+    {{/collection}}
 </section>

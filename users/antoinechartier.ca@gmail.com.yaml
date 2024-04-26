@@ -6,6 +6,11 @@ preferences:
   collections:
     pages:
       after_save: continue_editing
+    sections:
+      columns:
+        - title
+        - site
+        - status
   favorites:
     -
       name: 'Home ‹ Pages ‹ Collections'
