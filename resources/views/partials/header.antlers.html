@@ -30,7 +30,7 @@
         >
             <nav
                 aria-label="mobile-menu"
-                class="flex flex-col items-center py-24 text-white gap-6 [font-size:_clamp(0.6em,7.5vw,8vw)]"
+                class="flex flex-col items-center py-20 text-white gap-6 [font-size:_clamp(0.6em,7.5vw,8vw)]"
             >
                 <a href="#" class="p-3 my-7 text-center border-2 hover:bg-black/5">Mon compte</a>
                 {{ nav from="pages" }}
@@ -53,17 +53,13 @@
                         >Mon compte</a
                     >
                 </li>
-                <li class="">
-
-                        <a class="hover:text-white/75" href="{{ site:handle === 'default' ?= 'en' }}">
-                            {{ site:handle === 'default' ?= 'EN' }}
-                        </a>
-
-                        <a class="hover:text-white/75" href="{{ site:handle === 'anglais' ?= '/' }}">
-                            {{ site:handle === 'anglais' ?= 'FR' }}
-                        </a>
-
+                {{ sites }}
+                <li>
+                    <a class="hover:text-white/75" href="{{ url }}">
+                        {{ handle === 'default' ? 'EN' : 'FR' }}
+                    </a>
                 </li>
+            {{ /sites }}
             </ul>
         </div>
     </div>
@@ -73,9 +69,9 @@
 
 <!-- start nav desktop -->
 
-<section class="w-full h-44 flex justify-center bg-[#fbf8f3]">
+<section class="w-full h-[_clamp(8rem,8.5vw,13rem)] flex justify-center bg-[#fbf8f3]">
     <nav
-        class="flex items-center text-center justify-center md:justify-between w-full py-6 px-[_clamp(0.9em,6vw,6vw)] [font-size:_clamp(1.2em,1.8vw,2vw)] font-bold text-rougeBrissette"
+        class="flex items-center text-center justify-center gap-8 md:justify-between w-full py-6 px-[_clamp(0.9em,6vw,6vw)] [font-size:_clamp(1.2em,1.8vw,2vw)] font-bold text-rougeBrissette"
     >
 
         <a href="{{ site:url }}" class="md:pb-6">
