@@ -53,13 +53,13 @@
                         >Mon compte</a
                     >
                 </li>
-                {{ sites }}
                 <li>
-                    <a class="hover:text-white/75" href="{{ url }}">
-                        {{ handle === 'default' ? 'EN' : 'FR' }}
+                    {{ sites }}
+                    <a class="{{ site:handle === handle ?= 'hidden' }} uppercase" href="{{ url }}">
+                      {{ short_locale }}
                     </a>
+                  {{ /sites }}
                 </li>
-            {{ /sites }}
             </ul>
         </div>
     </div>

@@ -1,19 +1,19 @@
 <?php
 
-namespace Facades\Statamic\UpdateScripts;
+namespace Facades\Statamic\Console\Processes;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Statamic\UpdateScripts\Manager
+ * @see \Statamic\Console\Processes\Composer
  */
-class Manager extends Facade
+class Composer extends Facade
 {
     /**
      * Get the registered name of the component.
      */
     protected static function getFacadeAccessor(): string
     {
-        return 'Statamic\UpdateScripts\Manager';
+        return 'Statamic\Console\Processes\Composer';
     }
 }
