@@ -32,12 +32,18 @@
                 aria-label="mobile-menu"
                 class="flex flex-col items-center py-20 text-white gap-6 [font-size:_clamp(0.6em,7.5vw,8vw)]"
             >
-                <a href="#" class="p-3 my-7 text-center border-2 hover:bg-black/5">Mon compte</a>
+                {{nav:topnav}}
+                <a href="{{ url }}" class="p-3 my-7 text-center border-2 hover:bg-black/5">{{ title }}</a>
+                {{/nav:topnav}}
                 {{ nav from="pages" }}
                 <a href="{{ url }}" class="p-3 text-center hover:text-white/75">{{ title }}</a>
                 {{ /nav }}
-                <a href="#" class="p-3 text-center hover:text-white/75">EN</a>
-                <a href="#" class="p-3 mt-5 text-center w-[_clamp(38px,1.3em,8vw)] ">
+                {{ sites }}
+                <a class="{{ site:handle === handle ?= 'hidden' }} uppercase p-3 text-center hover:text-white/75" href="{{ url }}">
+                    {{ short_locale }}
+                </a>
+                {{ /sites }}
+                <a href="#facebook" class="p-3 mt-5 text-center w-[_clamp(38px,1.3em,8vw)] ">
                     <svg width="100%" height="100%" viewBox="0 0 250 475" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M229.6 259.38h-65.93v196.88H75.75V259.38H3.7v-80.86h72.07v-62.4C75.78 45.8 118 6.25 182.12 6.25c30.75 0 63.28 6.15 63.28 6.15v69.43h-36.02c-35.15 0-45.7 21.1-45.7 43.95v52.75h78.22z" fill="#fff"/></svg>
                 </a>
             </nav>
@@ -49,16 +55,16 @@
                     <a href="tel:{{compagnieinfos:telephone}}" class="hover:text-white/75">{{compagnieinfos:telephone}}</a>
                 </li>
                 <li class="">
-                    <a class="hover:bg-black/5 border-2 p-2" href=""
-                        >Mon compte</a
-                    >
+                    {{nav:topnav}}
+                    <a href="{{ url }}" class="p-3 my-7 text-center border-2 hover:bg-black/5">{{ title }}</a>
+                    {{/nav:topnav}}
                 </li>
                 <li>
                     {{ sites }}
-                    <a class="{{ site:handle === handle ?= 'hidden' }} uppercase" href="{{ url }}">
-                      {{ short_locale }}
-                    </a>
-                  {{ /sites }}
+                        <a class="{{ site:handle === handle ?= 'hidden' }} uppercase" href="{{ url }}">
+                            {{ short_locale }}
+                        </a>
+                    {{ /sites }}
                 </li>
             </ul>
         </div>
