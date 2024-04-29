@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     const autoPlay = () => {
         if(window.innerWidth < 800) return;
-        timeoutId = setTimeout(() => carousel.scrollLeft += carousel.querySelector(".slide").offsetWidth, 2500);
+        timeoutId = setTimeout(() => carousel.scrollLeft += carousel.querySelector(".slide").offsetWidth, 5000);
     }
     autoPlay();
 
