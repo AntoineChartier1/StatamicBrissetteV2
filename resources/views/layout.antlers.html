@@ -11,15 +11,13 @@
         {{ vite src="resources/js/site.js|resources/js/gsapAnim.js|resources/css/site.css" }}
     </head>
 
-    <body class=" bg-[#fbf8f3] font-sora h-full">
+    <body class=" flex flex-col bg-[#fbf8f3] font-sora min-h-screen">
 
         <header class="sticky top-0 z-50">
             {{ partial:header }}
         </header>
 
-        {{# <div class="box h-20 w-20 bg-green-500" >few</div> #}}
-
-        <main>
+        <main class="flex-grow" >
             {{ template_content }}
         </main>
 
