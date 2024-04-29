@@ -22,4 +22,7 @@ export default defineConfig({
         }),
         // vue2(),
     ],
+    optimizeDeps: {
+        exclude: ['lenis']
+      },
 });
