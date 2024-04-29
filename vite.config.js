@@ -10,6 +10,7 @@ export default defineConfig({
                 'resources/js/site.js',
                 'resources/js/gsapAnim.js',
                 'resources/js/carousel.js',
+                'resources/js/page404.js',
                 
 
                 // Control Panel assets.
