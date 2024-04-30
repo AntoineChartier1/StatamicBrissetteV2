@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>404 {{ title ?? site:name }}</title>
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="/assets/favicon_entrepot.jpg"
+        />
+
+        {{ vite
+        src="resources/js/site.js|resources/js/gsapAnim.js|resources/js/page404.js|resources/css/site.css"
+        }}
+    </head>
+
+    <body class="flex flex-col bg-red-500 font-sora pageErreurAnim">
+        <main class="flex-grow flex flex-col min-h-screen z-10">
+            {{ template_content }}
+        </main>
+        <footer class="flex flex-col sticky bottom-0 h-full bg-noir">
+            <div class="flex justify-center py-44">
+                <div
+                    class="flex flex-col justify-center w-fit text-center text-white"
+                >
+                    <a
+                        href="/"
+                    >
+                        <img
+                            src="/assets/image.svg"
+                            alt="logo Mini-entrepôts Courchesne"
+                        />
+                    </a>
+
+                    <p class="my-8">
+                        195, rue Brissette <br />
+                        Sainte-Agathe-des-Monts <br />
+                        QC J8C 3S4
+                    </p>
+                    <p class="my-8">
+                        <a href="tel:{{compagnieinfos:telephone}}" class=" hover:text-white/75">{{compagnieinfos:telephone}}</a><br />
+                        Montréal : 514 387-8642, poste 245
+                    </p>
+                    <a href="/#facebook">
+                        <svg
+                            width="100%"
+                            height="19"
+                            viewBox="0 0 10 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M9.184 10.375H6.547v7.875H3.03v-7.875H.148V7.141h2.883V4.645C3.031 1.832 4.72.25 7.285.25c1.23 0 2.531.246 2.531.246v2.777H8.375c-1.406 0-1.828.844-1.828 1.758v2.11h3.129z"
+                                fill="#D0B787"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    </body>
+</html>

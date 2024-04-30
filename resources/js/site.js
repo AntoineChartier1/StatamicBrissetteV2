@@ -7,18 +7,17 @@ const initApp = () => {
     const hamburgerBtn = document.getElementById("hamburger-button");
     const mobileMenu = document.getElementById("mobile-menu");
 
-    const animationDuration =
-        window.getComputedStyle(mobileMenu).animationDuration;
+const animationDuration = window.getComputedStyle(mobileMenu).animationDuration;
 
-    // Remove 's' or 'ms' from the end of the string and convert to a number
-    let duration = parseFloat(animationDuration);
+// Remove 's' or 'ms' from the end of the string and convert to a number
+let duration = parseFloat(animationDuration);
 
-    // If the original duration was in seconds, convert to milliseconds
-    if (animationDuration.includes("s")) {
-        duration *= 1000;
-    }
+// If the original duration was in seconds, convert to milliseconds
+if (animationDuration.includes('s')) {
+    duration *= 1000;
+}
 
-    mobileMenu.classList.remove("animate-close-menu", "animate-open-menu");
+    mobileMenu.classList.remove('animate-close-menu', 'animate-open-menu');
     let firstClick = true;
 
     const toggleMenu = () => {
@@ -51,15 +50,25 @@ const initApp = () => {
 
     hamburgerBtn.addEventListener("click", toggleMenu);
 
-    // smooth scroll
-    const lenis = new Lenis();
 
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
 
-    requestAnimationFrame(raf);
+
+
+// smooth scrolling 
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+lenis.on('scroll', ScrollTrigger.update)
+
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
+
+gsap.ticker.lagSmoothing(0)
+
 };
 
 document.addEventListener("DOMContentLoaded", initApp);
