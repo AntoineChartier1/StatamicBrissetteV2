@@ -22,7 +22,7 @@ tl.to(section_top, {
 
 
 const tl2 = gsap.timeline()
-.from(cadenas, { x: 1000, scale:0.5, duration: 0.5 })
+.from(cadenas, { x: '+=100', scale:0.5, duration: 0.5 })
 .set(cadenas, { clearProps: 'x,scale' });
 // const timln = gsap.timeline({ paused: true });
 
