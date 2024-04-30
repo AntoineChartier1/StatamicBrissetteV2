@@ -1,53 +1,148 @@
+<div class="flex-grow flex flex-col ">
+    <!-- top bar -->
 
-{{ vite src="resources/js/page404.js" }}
+    <section class="sticky top-0 w-full h-20 bg-rougeBrissette flex justify-center section_top">
+        <div class="h-full w-full px-[_clamp(0.9em,6vw,6vw)]">
+            <!-- mobile  -->
+            <div class="h-full flex flex-col justify-center md:hidden">
+                <ul
+                    class="flex justify-between items-center text-lg text-white"
+                >
+                    <li>
+                        <a
+                            href="tel:{{compagnieinfos:telephone}}"
+                            class="text-xl font-bold hover:text-white/75"
+                            >{{compagnieinfos:telephone}}</a
+                        >
+                    </li>
+                    <li>
+                        <button
+                            id="hamburger-button"
+                            class="md:hidden text-3xl relative w-8 h-8"
+                            name="menu"
+                        >
+                            <!-- &#9776; -->
+                            <div
+                                class="bg-white w-10 h-1.5 top-4 -mt-1.5 absolute transition-all duration-500 before:content-[''] before:bg-white before:w-10 before:h-1.5 before:absolute before:-translate-x-5 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-white after:w-10 after:h-1.5 after:absolute after:-translate-x-5 after:translate-y-3 after:transition-all after:duration-500"
+                            ></div>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <!-- menu mobile -->
+            <div
+                id="mobile-menu"
+                class="hidden md:hidden absolute top-16 left-0 w-full bg-rougeBrissette text-5xl flex-col justify-center origin-top z-50 animate-open-menu animate-close-menu"
+                style="height: calc(100vh); "
+            >
+                <nav
+                    aria-label="mobile-menu"
+                    class="flex flex-col items-center py-20 text-white gap-6 [font-size:_clamp(0.6em,7.5vw,8vw)]"
+                >
+                    {{nav:topnav}}
+                    <a
+                        href="{{ url }}"
+                        class="p-3 my-7 text-center border-2 hover:bg-black/5"
+                        >{{ title }}</a
+                    >
+                    {{/nav:topnav}} {{ nav from="pages" include_home="true"}}
+                    <a
+                        href="{{ url }}"
+                        class="p-3 text-center hover:text-white/75"
+                        >{{ title }}</a
+                    >
+                    {{ /nav }} {{ sites }}
+                    <a
+                        class="{{ site:handle === handle ?= 'hidden' }} uppercase p-3 text-center hover:text-white/75"
+                        href="{{ url }}"
+                    >
+                        {{ short_locale }}
+                    </a>
+                    {{ /sites }}
+                    <a
+                        href="#facebook"
+                        class="p-3 mt-5 text-center w-[_clamp(38px,1.3em,8vw)]"
+                    >
+                        <svg
+                            width="100%"
+                            height="100%"
+                            viewBox="0 0 250 475"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M229.6 259.38h-65.93v196.88H75.75V259.38H3.7v-80.86h72.07v-62.4C75.78 45.8 118 6.25 182.12 6.25c30.75 0 63.28 6.15 63.28 6.15v69.43h-36.02c-35.15 0-45.7 21.1-45.7 43.95v52.75h78.22z"
+                                fill="#fff"
+                            />
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+            <!-- desktop  -->
+            <div class="hidden h-full md:flex flex-col justify-center">
+                <ul
+                    class="flex justify-end gap-[_clamp(0.5em,1vw,2vw)] [font-size:_clamp(0.9em,1.9vw,1.4em)] font-bold text-white"
+                >
+                    <li>
+                        <a
+                            href="tel:{{compagnieinfos:telephone}}"
+                            class="p-[_clamp(0.45em,0.9vw,2vw)] hover:text-white/75"
+                            >{{compagnieinfos:telephone}}</a
+                        >
+                    </li>
+                    {{nav:topnav}}
+                    <li>
+                        <a
+                            href="{{ url }}"
+                            class="p-[_clamp(0.45em,0.9vw,2vw)] my-7 text-center border-2 hover:bg-black/5"
+                            >{{ title }}</a
+                        >
+                    </li>
+                    {{/nav:topnav}} {{ nav from="pages" include_home="true" }}
+                    <li>
+                        <a
+                            href="{{ url }}"
+                            class="p-[_clamp(0.45em,0.9vw,2vw)] text-center hover:text-white/75"
+                            >{{ title }}</a
+                        >
+                    </li>
+                    {{ /nav }} {{#
+                    <li>
+                        {{ sites }}
+                        <a
+                            class="{{ site:handle === handle ?= 'hidden' }} uppercase"
+                            href="{{ url }}"
+                        >
+                            {{ short_locale }}
+                        </a>
+                        {{ /sites }}
+                    </li>
+                    #}}
+                </ul>
+            </div>
+        </div>
+    </section>
 
-<div id="storage-unit" class="storage-unit-closed">
-    <div id="error-sign" class="hidden">404</div>
-</div>
-<div>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo corrupti non alias laborum autem, blanditiis ducimus atque, iusto architecto dolore temporibus aliquid quisquam doloribus libero mollitia. Minus, repudiandae magnam.
+    <!-- end top bar -->
+    <div class="flex-grow flex justify-center items-center bg-white section_center -z-20">
+        <svg class="cadenas transform translate-x-1/2 -translate-y-[16%] w-1/5 h-1/5" viewBox="0 0 54 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#a)">
+              <path d="M53.59 48.29V28.4h-7.84v-9.45C45.75 8.5 37.25 0 26.8 0S7.84 8.5 7.84 18.95v9.45H0v55.16h53.59V64.98h-8.4v10.17H8.4V36.8h36.79v11.48h8.4zM16.25 18.95c0 -5.82 4.73 -10.55 10.55 -10.55s10.55 4.73 10.55 10.55v9.45h-21.1z" fill="#E73B44"/>
+            </g>
+            <defs>
+              <clipPath id="a">
+                <path fill="#fff" d="M0 0h288.68v84.04H0z"/>
+              </clipPath>
+            </defs>
+          </svg>
+          
+        <p class="txt_introuvable [font-size:_clamp(0.9em,4vw,4em)]">404 - PAGE INTROUVABLE</p>
+    </div>
+    {{# {{current_layout }} <br />
+    {{current_template}}<br />
+    {{current_date}}<br />
+    {{current_full_url}}<br />
+    {{current_user}}<br />
+    <div id="error-sign">Erreur 404</div>
+    #}}
 </div>

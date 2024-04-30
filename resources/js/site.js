@@ -1,4 +1,6 @@
+import Lenis from 'lenis'
 // This is all you.
+
 
 const initApp = () => {
     const body = document.body;
@@ -48,6 +50,24 @@ if (animationDuration.includes('s')) {
 
     hamburgerBtn.addEventListener("click", toggleMenu);
 
+
+
+
+
+// smooth scrolling 
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+lenis.on('scroll', ScrollTrigger.update)
+
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
+
+gsap.ticker.lagSmoothing(0)
 
 };
 

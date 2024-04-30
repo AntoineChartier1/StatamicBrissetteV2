@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const wrapper = document.querySelector(".wrapper");
     const carousel = document.querySelector(".carousel");
     const arrowBtns = document.querySelectorAll(".wrapper button");
-    const carouselChildrens = [...carousel.children]
+    const carouselChildrens = [...carousel.children];
     
 
     let isDragging = false, startX, startScrollLeft, timeoutId;
@@ -51,12 +51,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const infiniteScroll = () => {
         if(carousel.scrollLeft === 0) {
             carousel.classList.add("no-transition");
-            carousel.scrollLeft = carousel.scrollWidth - ( 2 * carousel.offsetWidth);
-            carousel.classList.remove("no-transition");
-        } else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+            requestAnimationFrame(() => {
+                carousel.scrollTo({ left: carousel.scrollWidth - (2 * carousel.offsetWidth), behavior: 'instant' });
+                requestAnimationFrame(() => {
+                    carousel.classList.remove("no-transition");
+                });
+            });
+        } else if(Math.round(carousel.scrollLeft) >= carousel.scrollWidth - carousel.offsetWidth) {
             carousel.classList.add("no-transition");
-            carousel.scrollLeft = carousel.offsetWidth;
-            carousel.classList.remove("no-transition");
+            requestAnimationFrame(() => {
+                carousel.scrollTo({ left: carousel.offsetWidth, behavior: 'instant' });
+                requestAnimationFrame(() => {
+                    carousel.classList.remove("no-transition");
+                });
+            });
         }
     }
 
