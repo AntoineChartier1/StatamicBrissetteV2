@@ -1,8 +1,6 @@
-import Lenis from 'lenis'
-
 const section_top = document.querySelector(".section_top");
 const section_center = document.querySelector(".section_center");
-const txt_introuvable = document.querySelector(".txt_introuvable");
+// const txt_introuvable = document.querySelector(".txt_introuvable");
 const cadenas = document.querySelector(".cadenas");
 
 const tl = gsap.timeline({
