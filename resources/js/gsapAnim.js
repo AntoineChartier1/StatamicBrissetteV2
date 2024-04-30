@@ -10,14 +10,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             start: "-10% 70%",
             end: "bottom 70%",
             scrub: true,
-            markers: true, 
-            // stagger: {
-            //   each: 0.1,
-            //   from: 'center',
-            //   grid: 'auto',
-            //   ease: 'power2.inOut',
-            //   repeat: -1
-            // },
+            // markers: true, 
         },
     });
 
