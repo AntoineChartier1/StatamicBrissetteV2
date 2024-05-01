@@ -27,15 +27,18 @@
     {{ /if }}
     {{ partial:carousel }}
     
-    {{ partial:section1Text}}
+    {{ partial:section1Text slug_custom_section="trouvez-votre-unite-dentreposage"}}
         {{les_sections}}
+        {{if slug_custom == "trouvez-votre-unite-dentreposage"}}
             <div class="flex justify-center">
                 {{ partial:boutonCTA label="{{txtcta}}" btn_url="{{urlcta}}" couleur="rouge" }}
             </div>
+        {{/if}}
         {{/les_sections}}
     {{ /partial:section1Text }} 
 
-    {{ partial:section2Formulaire}}
+    {{ partial:section2Formulaire slug_custom_section="jai-besoin-dentreposer" }} 
+
     {{ partial:section3Images}}
     {{ partial:section4Stats}}
 

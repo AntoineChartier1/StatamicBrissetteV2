@@ -22,6 +22,18 @@ tabs:
               antlers: false
               hide_display: false
           -
+            handle: toggle_description
+            field:
+              default: true
+              type: toggle
+              display: description
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
             handle: text
             field:
               input_type: text
@@ -34,6 +46,8 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+              if:
+                toggle_description: 'equals true'
           -
             handle: boutoncta
             field:
@@ -41,7 +55,6 @@ tabs:
               type: toggle
               display: boutonCTA
               localizable: false
-              width: 50
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -55,7 +68,6 @@ tabs:
               type: text
               display: txtCTA
               localizable: true
-              width: 50
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -76,6 +88,98 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+              if:
+                boutoncta: 'equals true'
+      -
+        display: formulaire
+        fields:
+          -
+            handle: liste_doptions
+            field:
+              fields:
+                -
+                  handle: titre_select
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'titre select'
+                    instructions: 'titre affiché dans le selecteur'
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: titre_option
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: titre
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: image_plan
+                  field:
+                    mode: list
+                    container: assets
+                    folder: plans
+                    restrict: true
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'image plan'
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    max_files: 1
+                -
+                  handle: description
+                  field:
+                    antlers: false
+                    type: textarea
+                    display: description
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: prix
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: prix
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+              mode: stacked
+              add_row: 'ajouter une option'
+              reorderable: true
+              fullscreen: true
+              type: grid
+              display: "liste d'options"
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   sidebar:
     display: Sidebar
     sections:
@@ -87,3 +191,18 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+          -
+            handle: slug_custom
+            field:
+              from: title
+              generate: true
+              show_regenerate: true
+              type: slug
+              display: 'slug custom pour code'
+              instructions: 'Slug a utiliser coté front-end pour choisir la section a render dans le partial'
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

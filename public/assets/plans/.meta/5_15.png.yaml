@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'plan  5 x 10 entrepôt'
 size: 18021
-last_modified: 1709567082
+last_modified: 1713880657
 width: 664
 height: 284
 mime_type: image/png

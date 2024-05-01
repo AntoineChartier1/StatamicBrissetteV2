@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: "petit plant d'entrepôt"
 size: 6534
-last_modified: 1709567095
+last_modified: 1713880657
 width: 272
 height: 280
 mime_type: image/png

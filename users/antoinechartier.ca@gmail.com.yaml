@@ -11,6 +11,7 @@ preferences:
         - title
         - site
         - status
+      after_save: continue_editing
   favorites:
     -
       name: 'Home ‹ Pages ‹ Collections'
