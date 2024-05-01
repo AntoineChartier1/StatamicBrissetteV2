@@ -27,6 +27,12 @@
     {{ /if }}
     {{ partial:carousel }}
     {{ partial:section1Text}}
+        {{collection:sections}}
+            <div class="flex justify-center">
+                {{ partial:boutonCTA label="{{txtcta}}" btn_url="{{urlcta}}" couleur="rouge" }}
+            </div>
+        {{/collection:sections}}
+    {{ /partial:section1Text }} 
     {{ partial:section2Formulaire}}
     {{ partial:section3Images}}
     {{ partial:section4Stats}}

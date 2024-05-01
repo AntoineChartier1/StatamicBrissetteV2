@@ -101,7 +101,7 @@ grid_field:
     couleur_bg: bg-vert
     assets_field: hero2-2.webp
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1714093386
+updated_at: 1714568747
 champs:
   -
     id: lve4qvu7
@@ -124,7 +124,7 @@ champs:
     assets_field: hero.webp
     bouton: true
     btn_txt: 'En savoir plus'
-    btn_url: fefew
+    btn_url: /trouvez-votre-unite
     couleur_bg: bg-rougeBrissette
     text:
       -
@@ -163,7 +163,7 @@ champs:
     assets_field: hero3.webp
     bouton: true
     btn_txt: 'En savoir plus'
-    btn_url: www.google.com
+    btn_url: /trouvez-votre-unite
     couleur_bg: bg-rougeBrissette
     text:
       -

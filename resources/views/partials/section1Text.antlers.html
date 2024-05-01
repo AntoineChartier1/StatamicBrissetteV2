@@ -1,11 +1,9 @@
 <section class="w-full h-full [padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)]" >
     {{collection from="sections"}}
     <h1 class=" [font-size:_clamp(2em,4vw,5vw)] [margin-bottom:_clamp(0.5em,0.5vw,1vw)] text-center" >{{title}}</h1>
-    <p class=" [font-size:_clamp(0.9em,1.5vw,2vw)] [margin-bottom:_clamp(1em,0.8vw,1vw)] text-center" > {{texte}} </p>
+    <p class=" [font-size:_clamp(0.9em,1.5vw,2vw)] [margin-bottom:_clamp(1em,0.8vw,1vw)] text-center" > {{text}} </p>
     <p class="text-center">
-    {{if current_template === "home"}}
-        {{ partial:boutonCTA label="En savoir plus" btn_url="/entrepot" couleur="rouge" }}
-    {{/if}}
+    {{ slot }}
     </p>
     {{/collection}}
 </section>

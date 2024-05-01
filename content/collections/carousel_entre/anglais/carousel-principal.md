@@ -22,8 +22,8 @@ champs:
             text: 'à la location d’une nouvelle unité d’entreposage.'
     assets_field: hero.webp
     bouton: true
-    btn_txt: 'En savoir plus'
-    btn_url: fefew
+    btn_txt: 'Learn more'
+    btn_url: /find-your-unit
     couleur_bg: bg-rougeBrissette
     text:
       -
@@ -61,8 +61,8 @@ champs:
             text: "supplémentaire sur vos espaces de rangement jusqu’au 30\_avril 2024."
     assets_field: hero3.webp
     bouton: true
-    btn_txt: 'En savoir plus'
-    btn_url: www.google.com
+    btn_txt: 'Learn more'
+    btn_url: /find-your-unit
     couleur_bg: bg-rougeBrissette
     text:
       -
@@ -178,5 +178,5 @@ champs:
                     type: text
                     text: 'Battery mower'
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1714151657
+updated_at: 1714568683
 ---

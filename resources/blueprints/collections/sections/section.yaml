@@ -35,6 +35,48 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: boutoncta
+            field:
+              default: false
+              type: toggle
+              display: boutonCTA
+              localizable: false
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: txtcta
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: txtCTA
+              localizable: true
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                boutoncta: 'equals true'
+          -
+            handle: urlcta
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: url
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   sidebar:
     display: Sidebar
     sections:
