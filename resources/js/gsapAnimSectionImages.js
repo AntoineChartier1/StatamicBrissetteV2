@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-    console.log("DOM fully loaded and parsed");
     // gsap code here!
 
     const sectionImages = document.querySelector("#sectionImages");

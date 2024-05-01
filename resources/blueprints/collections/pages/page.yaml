@@ -70,14 +70,14 @@ tabs:
         display: Sections
         fields:
           -
-            handle: section
+            handle: les_sections
             field:
               mode: default
               create: true
               collections:
                 - sections
               type: entries
-              display: section
+              display: 'Les sections'
               localizable: true
               listable: hidden
               instructions_position: above

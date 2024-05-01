@@ -60,11 +60,9 @@
                     {{/nav:topnav}}
                 </li>
                 <li>
-                    {{ sites }}
-                        <a class="{{ site:handle === handle ?= 'hidden' }} uppercase" href="{{ url }}">
-                            {{ short_locale }}
-                        </a>
-                    {{ /sites }}
+                    {{ locales self="false" }}
+                        <a href="{{ permalink }}" class=" uppercase ">{{ site:short_locale }}</a>
+                    {{ /locales }}
                 </li>
             </ul>
         </div>
