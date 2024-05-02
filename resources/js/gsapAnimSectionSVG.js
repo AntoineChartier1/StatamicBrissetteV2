@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         },
     });
 
-    const svgElements = sectionSVG.querySelectorAll("svg");
+    const svgElements = sectionSVG.querySelectorAll("#txtSousSVG svg");
     const svgSousTxt = sectionSVG.querySelectorAll("#txtSousSVG p");
     
 
