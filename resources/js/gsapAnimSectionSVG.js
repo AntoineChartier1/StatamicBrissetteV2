@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             start: "top 40%",
             end: "bottom 60%",
             duration: 0.2,
-            scrub: true,
         },
     });
 
