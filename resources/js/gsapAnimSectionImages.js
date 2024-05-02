@@ -13,29 +13,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
         },
     });
 
-    tl.from("#block1 img", {
-        x: '-100%',  
-        opacity: 0.05,
-        ease: "ease-in-out",
-
-    })
-      .from("#block1 div", {
-          scale: 0.92,
-          stagger: 0.5,
-          duration: 0.1,
-          opacity: 0,
-          ease: "ease-in-out",
-      })
-      .from("#block2 img", {
-          x: '100%',  
-          opacity: 0.1,
-          ease: "ease-in-out",
-      })
-      .from("#block2 div", {
-        scale: 0.92,
-        stagger: 0.5,
-        duration: 0.1,
-        opacity: 0,
-        ease: "ease-in-out",
-      });
+    const rangees = document.querySelectorAll(".rangee");
+    rangees.forEach((rangee, index) => {
+        tl.from(rangee.querySelector("img"), {
+            x: index % 2 === 0 ? '92%' : '-92%',  
+            opacity: 1,
+            ease: "ease-in-out",
+        })
+        .from(rangee.querySelector("div"), {
+            scale: 0.92,
+            stagger: 0.5,
+            duration: 0.1,
+            opacity: 0.5,
+            ease: "ease-in-out",
+        });
+    });
 });

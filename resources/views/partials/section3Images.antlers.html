@@ -1,20 +1,22 @@
 {{ vite src="resources/js/gsapAnimSectionImages.js" }}
 
-<section id="sectionImages" class="w-full h-full [padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)] overflow-x-hidden">
+<section id="sectionImages" class="w-full h-full [padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)] overflow-x-hidden">    
+    {{les_sections}}
+    {{if slug_custom == slug_custom_section}}
+
+
     <div class="flex flex-col md:grid md:[grid-auto-rows:1fr] gap-12" >
-        <div id="block1" class="md:flex">
-            <img src="/assets/iStock-1803817492.webp" alt="" class="md:[width:52%] object-cover rounded-3xl" fetchpriority="low" loading="lazy">
-            <div class="md:w-1/2 py-5 md:p-10 flex flex-col justify-center">
-                <h2 class="[font-size:_clamp(1.5em,2vw,2.5vw)] mb-4">Historique</h2>
-                <p class="[font-size:_clamp(1em,1.2vw,2vw)]">Depuis 1977, Gestion J.G Courchesne inc. offre des services d'entreposage flexible et sécuritaire. Notre système de déverrouillage par code d'accès vous assure un accès unique et protège votre espace de rangement, et notre personnel qualifié est toujours disponible sur place pour vous assister et répondre à vos questions. Les lieux sont sous surveillance vidéo en permanence et les plans intérieurs et extérieurs de votre unité sont accessibles en tout temps sur notre plateforme web, vous permettant ainsi d'avoir un œil sur vos biens.</p>
+        {{grid_field}}
+        <div class="md:flex rangee {{index % 2 === 0 ? void : 'md:flex-row-reverse'}}">
+            <img src="{{image}}" alt="" class="md:[width:52%] object-cover rounded-3xl" fetchpriority="low" loading="lazy">
+            <div class="md:w-1/2 py-5 md:p-10 flex flex-col justify-center -z-50">
+                <h2 class="[font-size:_clamp(1.5em,2vw,2.5vw)] mb-4">{{titre}}</h2>
+                <p class="[font-size:_clamp(1em,1.2vw,2vw)]"> {{description}} </p>
             </div>
         </div>
-        <div id="block2" class="md:flex md:flex-row-reverse">
-            <img src="/assets/iStock-1473145871.webp" alt="" class="md:[width:52%] object-cover rounded-3xl" fetchpriority="low" loading="lazy">
-            <div class="md:w-1/2 py-5 md:py-10 md:pr-10 flex flex-col justify-center">
-                <h2 class="[font-size:_clamp(1.5em,2vw,2.5vw)] mb-4">Besoin de matériel pour entreposer vos biens?</h2>
-                <p class="[font-size:_clamp(1em,1.2vw,2vw)]">Notre boutique vous fournit tous les articles nécessaires pour entreposer vos biens de manière sécuritaire et durable. Nous avons des boîtes et des articles d'entreposage pour tous vos besoins de rangement!</p>
-            </div>
-        </div>
+        {{/grid_field}}
     </div>
+    
+    {{/if}}
+    {{/les_sections}}
 </section>
