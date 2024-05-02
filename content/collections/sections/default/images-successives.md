@@ -6,33 +6,28 @@ toggle_description: true
 boutoncta: false
 grid_field:
   -
-    id: lvp7y9w2
-    image: iStock-1473145871.webp
-    titre: 'Do you need storage supplies?'
-    description:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'Our shop provides you with all the necessary items to store your belongings safely and securely.'
-          -
-            type: hardBreak
-          -
-            type: text
-            text: 'We have boxes and items for all your storage needs!'
-  -
     id: lvp7w2d2
     image: iStock-1803817492.webp
-    titre: 'Our story'
+    titre: Historique
     description:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Since 1977, Gestion J.G Courchesne inc. offers flexible and secure storage services. Our passcode unlocking system gives you single access and protects your storage space, and our trained staff is always available on site to assist you and answer your questions. The premises are under permanent video surveillance and the interior and exterior plans of your unit are accessible at all times on our web platform, allowing you to keep an eye on your property.'
+            text: 'Depuis 1977, Gestion J.G Courchesne inc. offre des services d’entreposage flexible et sécuritaire. Notre système de déverrouillage par code d’accès vous assure un accès unique et protège votre espace de rangement, et notre personnel qualifié est toujours disponible sur place pour vous assister et répondre à vos questions. Les lieux sont sous surveillance vidéo en permanence et les plans intérieurs et extérieurs de votre unité sont accessibles en tout temps sur notre plateforme web, vous permettant ainsi d’avoir un œil sur vos biens.'
+  -
+    id: lvp7y9w2
+    image: iStock-1473145871.webp
+    titre: 'Besoin de matériel pour entreposer vos biens?'
+    description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Notre boutique vous fournit tous les articles nécessaires pour entreposer vos biens de manière sécuritaire et durable. Nous avons des boîtes et des articles d’entreposage pour tous vos besoins de rangement!'
 slug_custom: images-successives
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1714655828
+updated_at: 1714658245
 ---
