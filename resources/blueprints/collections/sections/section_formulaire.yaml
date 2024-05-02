@@ -1,0 +1,146 @@
+title: 'section formulaire'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Contenu
+        fields:
+          -
+            handle: nom_section
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'nom de la section'
+              localizable: false
+              listable: true
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              localizable: true
+              validate:
+                - required
+          -
+            handle: label_bouton
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'label bouton'
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: url_bouton
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'url bouton'
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: liste_doptions
+            field:
+              fields:
+                -
+                  handle: titre_select
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'titre du menu déroulant'
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: titre_option
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Titre
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: image_plan
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    mode: list
+                    container: assets
+                    folder: plans
+                    restrict: true
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'image du plan'
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: description
+                  field:
+                    antlers: false
+                    type: textarea
+                    display: Description
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: prix
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Prix
+                    instructions: |-
+                      exemple fr: 15,12 $
+                      exemple en: $15.12
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+              mode: stacked
+              add_row: 'Ajouter une option'
+              reorderable: true
+              fullscreen: true
+              type: grid
+              display: "liste d'options"
+              instructions: 'liste des options de storage'
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

@@ -8,6 +8,7 @@ preferences:
       after_save: continue_editing
     sections:
       columns:
+        - nom_section
         - title
         - site
         - status
