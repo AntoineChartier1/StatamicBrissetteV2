@@ -15,5 +15,8 @@
     },
     "dependencies": {
         "lenis": "^1.0.45"
+    },
+    "engines": {
+        "npm": "10.7.x"
     }
 }
