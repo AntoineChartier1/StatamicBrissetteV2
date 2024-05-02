@@ -19,13 +19,12 @@
         <form>            
             <select class="[font-size:_clamp(1em,1.4vw,3vw)] w-full border whitespace-normal text-center md:text-left border-gray-300 py-2 px-4 md:py-4 md:px-5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 [margin-bottom:_clamp(1em,0.8vw,1vw)]" onchange="updateInformation(this)">
                 {{liste_doptions}}
-                <option data-selecttitre="{{titre_select}}" data-titre="{{titre_option}}" data-img="{{ glide src='{{image_plan}}' }}" data-description="{{description}}" data-prix="{{prix}}" data-lien="{{urlcta}}#{{index+1}}"  {{ if first }}selected{{ /if }} >{{titre_select}}</option>
+                {{firstImage = liste_doptions.0.image_plan}}
+                <option data-selecttitre="{{titre_select}}" data-titre="{{titre_option}}" data-img="{{ glide src='{{image_plan}}' }}" data-img-alt="{{image_plan.alt}}" data-description="{{description}}" data-prix="{{prix}}" data-lien="{{urlcta}}#{{index+1}}"  {{ if first }}selected{{ /if }} >{{titre_select}}</option>
                 {{/liste_doptions}}
             </select>
         </form>
 
-
-          
 
         <script>
 
@@ -36,6 +35,7 @@
                 var titre = selectedOption.getAttribute('data-titre');
                 var lien = selectedOption.getAttribute('data-lien');
                 var img = selectedOption.getAttribute('data-img');
+                var imgAlt = selectedOption.getAttribute('data-img-alt');
                 var description = selectedOption.getAttribute('data-description');
                 var prix = selectedOption.getAttribute('data-prix');
 
@@ -53,10 +53,10 @@
                     <div class="md:w-1/2">
                         <h1 class="[font-size:_clamp(1.8em,2.5vw,4vw)] mb-3">${titre} </h1>
                         <p class="[font-size:_clamp(1em,1.5vw,4vw)] mb-5">${description} </p>
-                        <p class="[font-size:_clamp(1.2em,1.5vw,4vw)] mb-3 ">À partir de <strong class="[font-size:_clamp(2em,2vw,4.5vw)] text-rougeBrissette">${prix} $</strong>/mois</p>
+                        <p class="[font-size:_clamp(1.2em,1.5vw,4vw)] mb-3 ">À partir de <strong class="[font-size:_clamp(2em,2vw,4.5vw)] text-rougeBrissette">${prix}</strong>/mois</p>
                     </div>
                     <div class="md:w-1/2">
-                        <img class="max-h-full min-w-[65%] object-contain mx-auto" src="${img}" alt="">                       
+                        <img class="max-h-full min-w-[65%] object-contain mx-auto" src="${img}" alt="${imgAlt}">                       
                         <p class="text-center whitespace-nowrap mt-6">
                             <a href="${lien}" class="bouton bg-rougeBrissette text-white">
                                 {{txtcta}} &nbsp;
@@ -81,7 +81,7 @@
                     <p class="[font-size:_clamp(1.2em,1.5vw,4vw)] mb-3 text-pretty ">À partir de <strong class="[font-size:_clamp(2em,2vw,4.5vw)] text-rougeBrissette">39,70 $</strong>/mois</p>
                 </div>
                 <div class="md:w-1/2">
-                    <img class="max-h-full min-w-[65%] object-contain mx-auto" src="{{glide src="/assets/plans/5_5.png"}}" alt="">
+                    <img class="max-h-full min-w-[65%] object-contain mx-auto" src="{{glide src="{{firstImage}}"}}" alt="{{firstImage.alt}}">
                     <p class="text-center whitespace-nowrap mt-6">
                         {{ partial:boutonCTA label="{{txtcta}}" btn_url="{{urlcta}}" couleur="rouge" }}
 
