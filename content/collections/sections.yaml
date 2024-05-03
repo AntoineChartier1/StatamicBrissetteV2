@@ -6,7 +6,7 @@ propagate: true
 template: default
 layout: layout
 revisions: false
-slugs: false
+route: '{nom_section}'
 sort_dir: asc
 date_behavior:
   past: public

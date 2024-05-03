@@ -7,12 +7,12 @@ preferences:
     pages:
       after_save: continue_editing
     sections:
+      after_save: continue_editing
       columns:
-        - nom_section
         - title
         - site
+        - slug
         - status
-      after_save: continue_editing
   favorites:
     -
       name: 'Home ‹ Pages ‹ Collections'

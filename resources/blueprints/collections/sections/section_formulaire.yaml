@@ -144,3 +144,17 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: slug_field
+            field:
+              from: title
+              generate: true
+              show_regenerate: true
+              type: slug
+              display: 'Slug Field'
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

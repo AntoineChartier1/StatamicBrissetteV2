@@ -29,5 +29,6 @@ grid_field:
             text: 'Notre boutique vous fournit tous les articles nécessaires pour entreposer vos biens de manière sécuritaire et durable. Nous avons des boîtes et des articles d’entreposage pour tous vos besoins de rangement!'
 slug_custom: images-successives
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1714674255
+updated_at: 1714747804
+nom_section: 'Images successives'
 ---

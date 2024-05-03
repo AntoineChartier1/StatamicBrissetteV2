@@ -1,20 +1,8 @@
 
-
-
 <section class="w-full h-full pt-[_clamp(1em,5vw,5vw)]  md:[padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)]" >
-    {{collection:sections nom_section:is='formulaire'}}
-    
-    {{# {{les_sections}} #}}
-    {{# {{if slug_custom == slug_custom_section}} #}}
 
-    {{# {{liste_doptions}}
-    <br>
-        {{index}}
-        {{titre_option}}
-        {{image_plan}}
-        {{description}}
-        {{prix}}
-    {{/liste_doptions}} #}}
+    {{collection:sections :nom_section:is="nom_section_desire"}}
+    
 
     <div class="[padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)] bg-white">
         <h1 class="[font-size:_clamp(2em,3vw,4vw)] [margin-bottom:_clamp(0.5em,0.5vw,1vw)] text-center font-bold text-rougeBrissette" >{{title}}</h1>
@@ -85,7 +73,7 @@
                 <div class="md:w-1/2">
                     <img class="max-h-full min-w-[65%] object-contain mx-auto" src="{{glide src="{{firstImage}}"}}" alt="{{firstImage.alt}}">
                     <p class="text-center whitespace-nowrap mt-6">
-                        <a href="{{link to="{{url_bouton}}"}}" class="bouton bg-rougeBrissette text-white xl:!whitespace-nowrap !whitespace-normal">
+                        <a href="{{link to="{{url_bouton}}"}}#1" class="bouton bg-rougeBrissette text-white xl:!whitespace-nowrap !whitespace-normal">
                             {{label_bouton}}&nbsp;
                             <svg fill="#ffff" width="0px" height="0px" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" id="arrow"  >
                               <path class="fill-white" d="M8.29289 2.29289C8.68342 1.90237 9.31658 1.90237 9.70711 2.29289L14.2071 6.79289C14.5976 7.18342 14.5976 7.81658 14.2071 8.20711L9.70711 12.7071C9.31658 13.0976 8.68342 13.0976 8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L11 8.5H1.5C0.947715 8.5 0.5 8.05228 0.5 7.5C0.5 6.94772 0.947715 6.5 1.5 6.5H11L8.29289 3.70711C7.90237 3.31658 7.90237 2.68342 8.29289 2.29289Z"/>
@@ -101,8 +89,7 @@
         
 
     </div>
-    {{# {{/if}} #}}
-    {{# {{/les_sections}} #}}
+
     {{ /collection:sections }}
 
 </section>

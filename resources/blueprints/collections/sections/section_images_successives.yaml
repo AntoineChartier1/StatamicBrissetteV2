@@ -1,4 +1,4 @@
-title: 'section des images'
+title: 'section images successives'
 tabs:
   main:
     display: Main
@@ -11,24 +11,18 @@ tabs:
             field:
               type: text
               required: true
-              localizable: false
-              validate:
-                - required
           -
-            handle: section_title
+            handle: nom_section
             field:
-              type: text
-              localizable: false
-              validate:
-                - sometimes
-                - required
-              display: 'titre de la section'
-              instructions_position: above
-              listable: hidden
-              visibility: visible
-              replicator_preview: true
               input_type: text
               antlers: false
+              type: text
+              display: 'nom de la section'
+              localizable: false
+              listable: true
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
               hide_display: false
           -
             handle: grid_field
