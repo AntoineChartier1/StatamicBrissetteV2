@@ -4,21 +4,9 @@ tabs:
     display: Main
     sections:
       -
-        display: Contenu
+        display: 'Meta infos'
+        instructions: 'Infos utilisé pour naviguer dans el panneau de controle et le code'
         fields:
-          -
-            handle: nom_section
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: 'nom de la section'
-              localizable: false
-              listable: true
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
           -
             handle: title
             field:
@@ -27,6 +15,22 @@ tabs:
               localizable: true
               validate:
                 - required
+      -
+        display: Contenu
+        fields:
+          -
+            handle: titre_du_formulaire
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Titre du formulaire'
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
           -
             handle: label_bouton
             field:
@@ -144,17 +148,22 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
           -
-            handle: slug_field
+            handle: slug
             field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
               from: title
               generate: true
               show_regenerate: true
-              type: slug
-              display: 'Slug Field'
-              localizable: false
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
               hide_display: false

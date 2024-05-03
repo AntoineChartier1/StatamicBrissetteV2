@@ -27,17 +27,21 @@
     {{ /if }}
     {{ partial:carousel }}
     
-    {{ partial:section1Text}}
-        {{collection:sections nom_section:is='section texte'}}
+    {{ partial:section1Text titre_desire="CTA accueil"}}
+        {{collection:sections title:is="CTA accueil"}}
+        <p class="text-center">
             <div class="flex justify-center">
                 {{ partial:boutonCTA label="{{txtcta}}" btn_url="{{urlcta}}" couleur="rouge" }}
             </div>
+        </p>
         {{/collection:sections}}
     {{ /partial:section1Text }} 
     
-    {{ partial:section2Formulaire nom_section_desire="formulaire" }} 
+    {{ partial:section2Formulaire titre_desire="J'ai besoin d'entrepot" }} 
 
-    {{ partial:section3Images section_title_desire="Images successives"}}
+    {{ partial:section3Images titre_desire="Images successives"}}
+
+    {{ partial:sectionCTAbasdepage titre_desire="CTA bas de page"}}
 
     {{ partial:section4Stats}}
 

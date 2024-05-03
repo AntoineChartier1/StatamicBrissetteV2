@@ -1,9 +1,8 @@
 {{ vite src="resources/js/gsapAnimSectionImages.js" }}
 
 <section id="sectionImages" class="w-full h-full [padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)] overflow-x-hidden">    
-    {{# {{les_sections}}
-    {{if slug_custom == slug_custom_section}} #}}
-    {{collection:sections :section_title:is="nom_section_desire"}}
+
+    {{collection:sections :title:is="titre_desire"}}
     
     
     <div class="flex flex-col md:grid md:[grid-auto-rows:1fr] gap-12" >
@@ -18,7 +17,6 @@
         {{/grid_field}}
     </div>
     
-    {{# {{/if}} #}}
-    {{# {{/les_sections}} #}}
+
     {{/collection:sections}}
 </section>

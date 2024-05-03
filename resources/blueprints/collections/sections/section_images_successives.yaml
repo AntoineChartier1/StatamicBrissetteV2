@@ -4,26 +4,20 @@ tabs:
     display: Main
     sections:
       -
-        display: contenu
+        display: 'Meta infos'
+        instructions: 'Infos utilisé pour naviguer dans el panneau de controle et le code'
         fields:
           -
             handle: title
             field:
               type: text
               required: true
-          -
-            handle: nom_section
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: 'nom de la section'
-              localizable: false
-              listable: true
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
+              localizable: true
+              validate:
+                - required
+      -
+        display: contenu
+        fields:
           -
             handle: grid_field
             field:
@@ -123,4 +117,13 @@ tabs:
             field:
               type: slug
               localizable: true
-              validate: 'max:200'
+              validate:
+                - 'max:200'
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              from: title
+              generate: true
+              show_regenerate: true
+              hide_display: false

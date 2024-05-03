@@ -5,7 +5,7 @@ title: Accueil
 template: home
 author: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1714654801
+updated_at: 1714760627
 carousel:
   -
     id: lv46klkg
@@ -331,9 +331,10 @@ texte_defilant: 'Les entrepôts Brissette deviennent les Mini-entrepôts Courche
 section:
   - fce14bd3-9814-4361-96f3-adf80e029e77
 les_sections:
-  - fce14bd3-9814-4361-96f3-adf80e029e77
-  - ff577ff7-5601-4943-a378-0a2b6a3bfb2e
-  - 27879de2-3574-4bf2-89f5-dc91d67a7254
+  - 0e6ab002-9c90-4128-8cb2-cde23435cb84
+  - 86f7c799-3018-45b6-9c8d-2ac28ae21337
+  - 5f45bfe6-616d-424d-8564-9fd4b9bdfb6a
+  - 1f206c2d-19ac-4612-befd-90f421ce1a47
 ---
 ## Welcome to your brand new Setup Statamic ROUGE!
 

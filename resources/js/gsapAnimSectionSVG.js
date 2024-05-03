@@ -7,9 +7,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: sectionSVG,
-            start: "top 40%",
+            start: "top center",
             end: "bottom 60%",
             duration: 0.2,
+            // markers: true,
         },
     });
 
@@ -17,11 +18,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const svgSousTxt = sectionSVG.querySelectorAll("#txtSousSVG p");
     
 
-    tl.from('#txtBlock', {
-        y: '-40%',
-        opacity: 0,
-        ease: "ease-in-out",
-    });
+    // tl.from('#txtBlock', {
+    //     y: '-40%',
+    //     opacity: 0,
+    //     ease: "ease-in-out",
+    // });
     
     svgElements.forEach((svg, index) => {
       // Get the corresponding text element

@@ -5,9 +5,11 @@ title: Conseils
 author: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
 template: conseil
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1714651270
+updated_at: 1714758750
 assets_field: hero-conseil.webp
 bande_defilante: false
 parent: home
+les_sections:
+  - d2d6e681-6448-42a0-a469-70e03cd3802a
 ---
 page conseil

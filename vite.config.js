@@ -9,6 +9,7 @@ export default defineConfig({
                 'resources/css/site.css',
                 'resources/js/site.js',
                 'resources/js/gsapAnimSectionImages.js',
+                'resources/js/gsapAnimSectionCTA.js',
                 'resources/js/gsapAnimSectionSVG.js',
                 'resources/js/carousel.js',
                 'resources/js/page404.js',
