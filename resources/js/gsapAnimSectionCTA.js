@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             start: "top center",
             end: "bottom 40%",
             duration: 0.05,
-            markers: true,
+            // markers: true,
         },
     });
 
