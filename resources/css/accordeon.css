@@ -14,15 +14,22 @@
 }
 
 .item:not(.active) .content{
-    @apply overflow-hidden py-0 max-h-0 transition-all duration-1000 ease-in-out
+    @apply overflow-hidden py-0 max-h-0 transition-all duration-300 ease-in-out
 }
 
 .item .content{
-    @apply overflow-hidden transition-all duration-1000 ease-in-out
+    @apply overflow-hidden transition-all duration-500 ease-in-out [font-size:_clamp(0.9em,1vw,2vw)]
 }
-.item .content div{
+.item .content > div{
     @apply  overflow-hidden p-[_clamp(0.9em,1.3vw,1.5em)] text-center
 }
 .item .content div a{
-    @apply  my-3
+    @apply  my-3 md:my-5 xl:my-7
+}
+
+
+
+#accordeon .content .font-ul  ul
+{
+    @apply  list-disc list-inside  
 }

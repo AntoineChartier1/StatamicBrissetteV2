@@ -84,10 +84,11 @@ html.lenis, html.lenis body {
 } 
 
 /* liste texte dans le carousel */
-.font-ul ul
+.carousel .font-ul ul
 {
     @apply [font-size:0.6em] list-disc [padding-left:1.6em] [padding-top:0.5em];
 }
+
 
 .bouton{
     @apply inline-flex whitespace-nowrap overflow-hidden justify-center self-start items-center text-center px-3 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold [font-size:_clamp(0.85em,1.5vw,2vw)];

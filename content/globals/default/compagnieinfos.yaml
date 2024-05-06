@@ -1,2 +1,11 @@
 nom: 'Mini-entrepôts Courchesne'
+logo: image.svg
 telephone: '819 326-7900'
+adresse: |-
+  195, rue Brissette <br />
+  Sainte-Agathe-des-Monts <br />
+  QC J8C 3S4
+lien_adresse: 'https://www.google.ca/maps/place/195+Rue+Brissette,+Sainte-Agathe-des-Monts,+QC+J8C+3S4/@46.0555601,-74.2714038,17z/data=!3m1!4b1!4m6!3m5!1s0x4ccf6aba5dfd15f1:0x2346d443adff030d!8m2!3d46.0555601!4d-74.2688289!16s%2Fg%2F11bw3zrjvv?hl=fr&entry=ttu'
+telephone_montreal: 'Montréal : 514 387-8642, poste 245'
+numero_telephone_montreal: '514 387-8642'
+lien_facebook: 'https://www.facebook.com/mini.entrepot.brissette?mibextid=JRoKGi'
