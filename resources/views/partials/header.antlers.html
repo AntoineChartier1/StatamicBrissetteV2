@@ -36,7 +36,7 @@
                 <a href="{{ url }}" class="p-3 my-7 text-center border-2 hover:bg-black/5">{{ title }}</a>
                 {{/nav:topnav}}
                 {{ nav from="pages" }}
-                <a href="{{ url }}" class="p-3 text-center hover:text-white/75">{{ title }}</a>
+                <a href="{{ link to="{{btn_url}}" }}" class="p-3 text-center hover:text-white/75">{{ title }}</a>
                 {{ /nav }}
                 {{ sites }}
                 <a class="{{ site:handle === handle ?= 'hidden' }} uppercase p-3 text-center hover:text-white/75" href="{{ url }}">

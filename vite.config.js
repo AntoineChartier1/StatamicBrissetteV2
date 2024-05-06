@@ -7,12 +7,14 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/site.css',
+                'resources/css/accordeon.css',
                 'resources/js/site.js',
                 'resources/js/gsapAnimSectionImages.js',
                 'resources/js/gsapAnimSectionCTA.js',
                 'resources/js/gsapAnimSectionSVG.js',
                 'resources/js/carousel.js',
                 'resources/js/page404.js',
+                'resources/js/accordeon.js',
                 
 
                 // Control Panel assets.

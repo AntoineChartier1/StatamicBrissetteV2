@@ -1,0 +1,31 @@
+.header svg{
+    @apply transition-all duration-300 ease-in-out
+}
+
+.item .activeIcon{
+    @apply invisible opacity-0
+}
+
+.item.active .inactiveIcon{
+    @apply invisible opacity-0
+}
+.item.active .activeIcon{
+    @apply visible opacity-100
+}
+
+.item:not(.active) .content{
+    @apply overflow-hidden py-0 max-h-0 transition-all duration-1000 ease-in-out
+}
+/* .item:not(.active) .content{
+    transition: max-height 0.5s ease, padding 0.5s ease;
+} */
+
+.item .content{
+    @apply overflow-hidden transition-all duration-1000 ease-in-out
+}
+.item .content div{
+    @apply  overflow-hidden p-5 text-center
+}
+.item .content div a{
+    @apply  my-3
+}
