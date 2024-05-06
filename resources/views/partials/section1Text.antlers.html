@@ -2,20 +2,8 @@
 
 
 <section id="sectionCTA" class="w-full h-full [padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)]" >
-    {{collection:sections :title:is="titre_desire"}}
     <h1 class=" [font-size:_clamp(2em,4vw,5vw)] [margin-bottom:_clamp(0.5em,0.5vw,1vw)] text-center" >{{titre}}</h1>
     <p class=" [font-size:_clamp(0.9em,1.5vw,2vw)] [margin-bottom:_clamp(1em,0.8vw,1vw)] text-center" > {{texte}} </p>
         {{# bouton si il y a lieu #}}
         {{ slot }} 
-    
-    {{ /collection:sections }}
 </section>
-
-
-        {{# <div id="txtBlock" class="[padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)] mb-6">
-            <h3 class="[font-size:_clamp(1em,1.6vw,2.5vw)] text-center mb-5 md:mb-8">Évaluez vos besoins d'entreposage dès maintenant et réservez votre unité directement sur notre site web.</h3>
-            <div class="flex justify-center mt-8">
-                {{ partial:boutonCTA label="Réserver une unité" btn_url="/trouvez-votre-unite" couleur="rouge" }}
-            </div>
-        </div>
-  #}}

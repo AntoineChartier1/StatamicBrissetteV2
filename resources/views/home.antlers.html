@@ -25,27 +25,34 @@
         </ul>                
     </div>
     {{ /if }}
-    {{ partial:carousel }}
     
-    {{ partial:section1Text titre_desire="CTA accueil"}}
-        {{collection:sections title:is="CTA accueil"}}
-        <p class="text-center">
-            <div class="flex justify-center">
-                {{ partial:boutonCTA label="{{txtcta}}" btn_url="{{urlcta}}" couleur="rouge" }}
-            </div>
-        </p>
-        {{/collection:sections}}
-    {{ /partial:section1Text }} 
+    {{ partial:carousel}}
+
+    {{ les_sections title:is="CTA accueil"}}
+        {{ partial:section1Text}}
+            <p class="text-center">
+                <div class="flex justify-center">
+                    {{ partial:boutonCTA label="{{txtcta}}" btn_url="{{urlcta}}" couleur="rouge" }}
+                </div>
+            </p>
+        {{ /partial:section1Text}} 
+    {{/les_sections}}
+
+    {{ les_sections title:is="J'ai besoin d'entrepot"}}
+        {{ partial:section2Formulaire}} 
+    {{/les_sections}}
+
+    {{ les_sections title:is="Images successives"}}
+        {{ partial:section3Images}}
+    {{/les_sections}}
     
-    {{ partial:section2Formulaire titre_desire="J'ai besoin d'entrepot" }} 
+    {{ les_sections title:is="CTA bas de page"}}
+        {{ partial:sectionCTAbasdepage}}
+    {{/les_sections}}
 
-    {{ partial:section3Images titre_desire="Images successives"}}
-
-    {{ partial:sectionCTAbasdepage titre_desire="CTA bas de page"}}
-
-    {{ partial:section4Stats}}
-
-
+    {{les_sections title:is="statistiques"}}
+        {{ partial:section4Stats}}
+    {{/les_sections}}
 
 
 </div>

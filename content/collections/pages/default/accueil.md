@@ -5,7 +5,7 @@ title: Accueil
 template: home
 author: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1714760627
+updated_at: 1715028187
 carousel:
   -
     id: lv46klkg
@@ -335,6 +335,7 @@ les_sections:
   - 86f7c799-3018-45b6-9c8d-2ac28ae21337
   - 5f45bfe6-616d-424d-8564-9fd4b9bdfb6a
   - 1f206c2d-19ac-4612-befd-90f421ce1a47
+  - 3bf1277a-3580-4ecf-8552-ca5cb5f534b3
 ---
 ## Welcome to your brand new Setup Statamic ROUGE!
 

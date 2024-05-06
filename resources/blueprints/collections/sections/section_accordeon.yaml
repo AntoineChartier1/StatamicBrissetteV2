@@ -4,6 +4,8 @@ tabs:
     display: Main
     sections:
       -
+        display: 'Meta infos'
+        instructions: 'Infos utilisé pour naviguer dans el panneau de controle et le code'
         fields:
           -
             handle: title
@@ -151,3 +153,11 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              from: title
+              generate: true
+              show_regenerate: true
+              hide_display: false

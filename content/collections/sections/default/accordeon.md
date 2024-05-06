@@ -151,7 +151,7 @@ accrodeon:
     txtcta: "Réservez votre unité d'entreposage en ligne"
     urlcta: trouvez-votre-unite
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1715019543
+updated_at: 1715025016
 accordeon:
   -
     id: lvv87h5f

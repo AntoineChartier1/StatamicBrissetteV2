@@ -9,43 +9,16 @@
         class="w-full [height:_clamp(20em,24vw,50vw)] object-cover"
     />
 
-    {{collection:sections title:is="accordeon"}}
-    <section class="flex flex-col justify-center [padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)]">
-        <h1 class="text-center [font-size:_clamp(2em,4vw,5vw)] mb-[_clamp(0.8em,5vw,2vw)]">{{titre_de_laccordeon}}</h1>
+    {{les_sections title:is="accordeon"}}
+        {{partial:accordeon}}
+    {{/les_sections}}
 
-        {{accordeon}}
-        <div id="accordeon" class=" overflow-hidden flex flex-col gap-2 [padding:0_clamp(0.9em,6vw,6vw)]">
-            <div class="item">
-                <div class="header flex justify-between items-center p-5 cursor-pointer border-b-2 border-dore">
-                    <h1 class="flex justify-center flex-1 text-center [font-size:_clamp(1em,1.5vw,2.5vw)] ">{{titre}}</h1>
-                    <div class="relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class="w-[_clamp(1.5em,4vw,3.2em)] h-[_clamp(1.5em,4vw,3.2em)] inactiveIcon stroke-rougeBrissette absolute">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                          </svg>
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class="w-[_clamp(1.5em,4vw,3.2em)] h-[_clamp(1.5em,4vw,3.2em)]  activeIcon stroke-rougeBrissette ">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                          </svg>
-                    </div>
-                      
-                </div>
-                <div class="content">
-                    <div>
-                        <div class="font-ul text-center">
-                            {{texte}}
-                        </div>
-                        {{if bouton}}
-                        {{partial:partials/boutonCTA label="{{txtcta}}" btn_url="{{urlcta}}" couleur="rouge" }}
-                        {{/if}}
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{/accordeon}}
+    {{les_sections title:is="CTA bas de page"}}
+        {{ partial:sectionCTAbasdepage}}
+    {{/les_sections}}
 
-    </section>
-    {{/collection:sections}}
+    {{les_sections title:is="statistiques"}}
+        {{ partial:section4Stats}}
+    {{/les_sections}}
 
-
-    {{ partial:sectionCTAbasdepage titre_desire="CTA bas de page"}}
-    {{ partial:section4Stats}}
 </div>

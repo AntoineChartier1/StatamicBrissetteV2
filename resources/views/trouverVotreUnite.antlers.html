@@ -5,8 +5,18 @@
         class="w-full [height:_clamp(20em,24vw,50vw)] object-cover"
     />
     
+    {{les_sections title:is="CTA trouver votre unite"}}
+        {{ partial:section1Text}} 
+    {{/les_sections}}
 
-    {{ partial:section1Text titre_desire="CTA trouver votre unite" }} 
-    {{ partial:section2Formulaire titre_desire="J'ai besoin d'entrepot" }} 
-    {{ partial:section4Stats}}
+
+
+    {{les_sections title:is="J'ai besoin d'entrepot"}}
+        {{ partial:section2Formulaire }} 
+    {{/les_sections}}
+
+    {{les_sections title:is="statistiques"}}
+        {{ partial:section4Stats}}
+    {{/les_sections}}
+
 </div>
