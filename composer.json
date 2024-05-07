@@ -16,7 +16,7 @@
         "ext-gd": "*",
         "ext-mbstring": "*",
         "guzzlehttp/guzzle": "^7.2",
-        "jezzdk/statamic-google-maps": "*",
+        "jezzdk/statamic-google-maps": "^2.1",
         "laravel/framework": "^10.8",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
