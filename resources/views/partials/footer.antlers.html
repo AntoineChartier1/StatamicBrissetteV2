@@ -1,6 +1,6 @@
 <div class="w-full bg-noir p-[_clamp(0.9em,6vw,6vw)_clamp(0.9em,6vw,6vw)]">
     <div class="w-fit text-white">
-        <img src="{{ glide :src='compagnieinfos:logo'}}" alt="{{compagnieinfos:logo.alt}}" />
+        <a href="{{link to="/"}}"><img src="{{ glide :src='compagnieinfos:logo'}}" alt="{{compagnieinfos:logo.alt}}" /></a>
 
         <p class="my-8">
             <a
@@ -9,7 +9,7 @@
                 class="hover:text-white/75"
                 >{{compagnieinfos:adresse}}</a
             >
-        </p>
+        </p> 
         <p class="my-8">
             <a
                 href="tel:{{compagnieinfos:telephone}}"
