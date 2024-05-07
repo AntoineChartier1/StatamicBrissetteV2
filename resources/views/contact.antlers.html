@@ -89,37 +89,9 @@
 <div class="h-full m-0 p-o">
     <div id="map" class="!h-full"></div>
 </div>
-<script>
-    var map;
-    function initMap(position) {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: position,
-        zoom: 8
-      });
-    }
-
-    function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((position) => {
-          initMap({
-            lng: position.coords.longitude, lat: position.coords.latitude});
-        });
-      } else {
-        initMap({lat: -34.397, lng: 150.644});
-      }
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-VVTDA3RP3r3QehgyDkZq14ptPN62lew&callback=getLocation"
-  async defer></script>
 
 
-
-
-
-
-
-
-
+<iframe src="https://snazzymaps.com/embed/605386" width="100%" height="600px" style="border:none;"></iframe>
 
 
 
@@ -162,7 +134,7 @@ async function initMap() {
       console.log("Advanced markers are not available.")
     }
   });
-
+46.05563083114301, -74.26883962883552
   // The marker, positioned at Uluru
   const marker = new AdvancedMarkerView({
     map: map,
