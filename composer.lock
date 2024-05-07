@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f541303e4a9382e4eb5e38321996b533",
+    "content-hash": "9a74e958178cf149f47480f10fa95a10",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -1397,6 +1397,54 @@
                 "source": "https://github.com/JamesHeinrich/getID3/tree/v1.9.23"
             },
             "time": "2023-10-19T13:18:49+00:00"
+        },
+        {
+            "name": "jezzdk/statamic-google-maps",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jezzdk/statamic-google-maps.git",
+                "reference": "91ebf18e03f8c57a3998a1c01df7e33a2980cffe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jezzdk/statamic-google-maps/zipball/91ebf18e03f8c57a3998a1c01df7e33a2980cffe",
+                "reference": "91ebf18e03f8c57a3998a1c01df7e33a2980cffe",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Statamic Google Maps",
+                    "description": "Statamic Google Maps addon",
+                    "editions": [
+                        "free",
+                        "pro"
+                    ]
+                },
+                "laravel": {
+                    "providers": [
+                        "Jezzdk\\StatamicGoogleMaps\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jezzdk\\StatamicGoogleMaps\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Jess Stopa"
+                }
+            ],
+            "support": {
+                "email": "jess@stopa.dk",
+                "issues": "https://github.com/jezzdk/statamic-google-maps/issues",
+                "source": "https://github.com/jezzdk/statamic-google-maps/tree/v2.1.0"
+            },
+            "time": "2024-01-18T21:19:37+00:00"
         },
         {
             "name": "laragraph/utils",
