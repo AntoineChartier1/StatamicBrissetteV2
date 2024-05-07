@@ -36,6 +36,19 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
+            handle: email
+            field:
+              input_type: email
+              antlers: false
+              type: text
+              display: email
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
             handle: telephone
             field:
               input_type: tel

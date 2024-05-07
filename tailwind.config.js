@@ -16,6 +16,9 @@ export default {
                 vert: "#396b2a",
                 dore: "#D0B787",
             },
+            boxShadow: {
+                'borderBoxForm': '0 3px 0 0px #D0B787',
+            },
             fontFamily: {
                 sora: ["Sora", "sans-serif"],
             },

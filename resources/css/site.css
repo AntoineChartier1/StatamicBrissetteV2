@@ -106,7 +106,7 @@ html.lenis, html.lenis body {
     }
 
   }
-  @media (max-width: 627px) {
+  @media (max-width: 639px) {
     .bouton {
       
       @apply text-[100%] w-full;  
