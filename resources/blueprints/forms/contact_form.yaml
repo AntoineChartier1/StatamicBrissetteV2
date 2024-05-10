@@ -1,0 +1,26 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: prenom
+            field:
+              type: text
+              display: Prénom
+          -
+            handle: nom
+            field:
+              type: text
+              display: Nom
+          -
+            handle: telephone
+            field:
+              type: integer
+              display: tele
+          -
+            handle: coremes
+            field:
+              type: textarea
+              display: Message
