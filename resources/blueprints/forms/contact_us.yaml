@@ -6,25 +6,25 @@ tabs:
         display: 'contact form fields'
         fields:
           -
-            handle: prenom
+            handle: name
             field:
               type: text
-              display: Prénom
+              display: Name
               localizable: true
           -
-            handle: nom
+            handle: last_name
             field:
               type: text
-              display: Nom
+              display: 'Last name'
               localizable: true
           -
-            handle: telephone
+            handle: phone
             field:
               type: integer
-              display: téléphone
+              display: Phone
               localizable: true
           -
-            handle: zonetexte
+            handle: textarea
             field:
               type: textarea
               display: Message

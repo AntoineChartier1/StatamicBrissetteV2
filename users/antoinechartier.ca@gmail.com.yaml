@@ -17,3 +17,8 @@ preferences:
     -
       name: 'Home ‹ Pages ‹ Collections'
       url: collections/pages/entries/home
+  forms:
+    contact_form:
+      columns:
+        - datestamp
+        - prenom
