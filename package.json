@@ -4,8 +4,7 @@
         "serve": "php artisan serve",
         "dev": "vite",
         "build": "vite build",
-        "build:digitalocean": "npm install --include=dev && npm run build && npm ci"
-
+        "build:digitalocean": "npm install --include=dev && npm run build && npm ci && php please ssg:generate"
     },
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.9",
