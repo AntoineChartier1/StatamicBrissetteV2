@@ -1,0 +1,31 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'contact form fields'
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+              localizable: true
+          -
+            handle: last_name
+            field:
+              type: text
+              display: 'Last name'
+              localizable: true
+          -
+            handle: phone
+            field:
+              type: integer
+              display: Phone
+              localizable: true
+          -
+            handle: textarea
+            field:
+              type: textarea
+              display: Message
+              localizable: true

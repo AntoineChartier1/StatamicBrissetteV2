@@ -1,0 +1,31 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'contact form fields'
+        fields:
+          -
+            handle: prenom
+            field:
+              type: text
+              display: Prénom
+              localizable: true
+          -
+            handle: nom
+            field:
+              type: text
+              display: Nom
+              localizable: true
+          -
+            handle: telephone
+            field:
+              type: integer
+              display: téléphone
+              localizable: true
+          -
+            handle: zonetexte
+            field:
+              type: textarea
+              display: Message
+              localizable: true
