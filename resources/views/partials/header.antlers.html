@@ -1,90 +1,4 @@
-<<<<<<< HEAD
-        <!-- top bar -->
-        
-        <section class="w-full h-20 bg-rougeBrissette flex justify-center ">
-            <div class="h-full w-full px-[_clamp(0.9em,6vw,6vw)]">
-                <!-- mobile  -->
-                <div class="h-full flex flex-col justify-center md:hidden">
-                    <ul
-                        class="flex justify-between items-center text-lg text-white"
-                    >
-                        <li>
-                            <a class="text-xl font-bold" href="#"
-                                >819 326-7900</a
-                            >
-                        </li>
-                        <li>
-                            <button
-                                id="hamburger-button"
-                                class="md:hidden text-3xl relative w-8 h-8"
-                            >
-                                <!-- &#9776; -->
-                                <div
-                                    class="bg-white w-10 h-1.5 top-4 -mt-1.5 absolute transition-all duration-500 before:content-[''] before:bg-white before:w-10 before:h-1.5 before:absolute before:-translate-x-5 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-white after:w-10 after:h-1.5 after:absolute after:-translate-x-5 after:translate-y-3 after:transition-all after:duration-500"
-                                ></div>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-                <!-- menu mobile -->
-                <div
-                    id="mobile-menu"
-                    class="hidden md:hidden absolute top-16 left-0 w-full bg-rougeBrissette text-5xl flex-col justify-center origin-top animate-open-menu z-40" 
-                    style="height: calc(100vh - 4rem);"
-                    >
-                    <nav
-                        aria-label="mobile-menu"
-                        class="flex flex-col items-center py-24 text-white gap-6 [font-size:_clamp(0.6em,7.5vw,8vw)]"
-                    >
-                        <a
-                            href="#"
-                            class="p-3 my-7 text-center border-2"
-                            >Mon compte</a
-                        >
-                        {{ nav from="pages" }}
-                        <a
-                            href="{{ url }}"
-                            class="p-3 text-center"
-                            >{{ title }}</a
-                        >
-                        {{ /nav }}
-                        <a
-                            href="#"
-                            class="p-3 text-center"
-                            >EN</a
-                        >
-                        <a
-                            href="#"
-                            class="p-3 text-center"
-                            >f</a
-                        >
-                    </nav>
-                </div>
-                <!-- desktop  -->
-                <div class="hidden h-full md:flex flex-col justify-center">
-                    <ul class="flex justify-end gap-6 text-xl font-bold text-white">
-                        <li>
-                            <a href=""
-                                >819 326-7900</a
-                            >
-                        </li>
-                        <li class="">
-                            <a class="hover:text-gray-500 border-2 p-2" href=""
-                                >Mon compte</a
-                            >
-                        </li>
-                        <li class="">
-                            <a class="hover:text-gray-500" href="">EN</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <!-- end top bar -->
-=======
 <!-- top bar -->
->>>>>>> b4293a969660e914cffa2175718b8de8f1056802
 
 <section class="w-full h-20 bg-rougeBrissette flex justify-center ">
     <div class="h-full w-full px-[_clamp(0.9em,6vw,6vw)]">
@@ -115,12 +29,7 @@
             style="height: calc(100vh - 4rem)"
         >
             <nav
-<<<<<<< HEAD
                 class="flex items-center text-center justify-center md:justify-between w-full py-6 px-[_clamp(0.9em,6vw,6vw)] text-xl font-bold text-rougeBrissette"
-=======
-                aria-label="mobile-menu"
-                class="flex flex-col items-center py-20 text-white gap-6 [font-size:_clamp(0.6em,7.5vw,8vw)]"
->>>>>>> b4293a969660e914cffa2175718b8de8f1056802
             >
                 {{nav:topnav}}
                 <a href="{{ url }}" class="p-3 my-7 text-center border-2 hover:bg-black/5">{{ title }}</a>

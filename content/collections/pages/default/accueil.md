@@ -5,11 +5,7 @@ title: Accueil
 template: home
 author: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-<<<<<<< HEAD:content/collections/pages/home.md
 updated_at: 1713795483
-=======
-updated_at: 1715028187
->>>>>>> b4293a969660e914cffa2175718b8de8f1056802:content/collections/pages/default/accueil.md
 carousel:
   -
     id: lv46klkg
