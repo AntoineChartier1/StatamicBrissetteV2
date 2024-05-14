@@ -1,19 +1,19 @@
 <?php
 
-namespace Facades\Statamic\UpdateScripts;
+namespace Facades\Statamic\Marketplace;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Statamic\UpdateScripts\Manager
+ * @see \Statamic\Marketplace\Marketplace
  */
-class Manager extends Facade
+class Marketplace extends Facade
 {
     /**
      * Get the registered name of the component.
      */
     protected static function getFacadeAccessor(): string
     {
-        return 'Statamic\UpdateScripts\Manager';
+        return 'Statamic\Marketplace\Marketplace';
     }
 }
