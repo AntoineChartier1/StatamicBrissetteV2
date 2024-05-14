@@ -33,6 +33,7 @@
                     </span>
                 </div>
             </div>
+            {{ nocache }} 
             {{ if locale == "default" }}
             <div class="md:w-2/3">
 
@@ -165,6 +166,7 @@
             <input type="text" class="hidden" name="{{ honeypot ?? 'username' }}">
             {{ /form:contact_us }}
         {{ /if }}
+        {{ /nocache }} 
             </div>
 
         </div>
