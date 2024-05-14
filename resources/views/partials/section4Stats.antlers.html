@@ -1,0 +1,42 @@
+{{ vite src="resources/js/gsapAnimSectionSVG.js" }}
+     
+
+     <section id="sectionSVG" class="w-full h-full md:[padding:_clamp(2em,3.5vw,5vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)] mb-16 [padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)]">
+        <div>
+            <div id="txtSousSVG" class="grid grid-cols-2 md:grid-cols-4 [font-size:_clamp(1em,1.5vw,2.5vw)]">
+                <div class="py-10 pr-10 md:px-10 grid-cell-r">
+                    <div class=" h-[_clamp(4em,5vw,7vw)]">
+                        {{stats_boxes.0.svg_code}}
+                    </div>
+                    <p class="text-center mt-10 ">
+                        {{stats_boxes.0.texte_statistique}}
+                    </p>
+                </div>
+                <div class="py-10 pl-10 md:px-10 lg-grid-cell-r grid-cell-b">
+                    <div class="h-[_clamp(4em,5vw,7vw)]">
+                        {{stats_boxes.1.svg_code}}
+                    </div>
+                    <p class="text-center mt-10  ">
+                        {{stats_boxes.1.texte_statistique}}
+                    </p>
+                </div>
+                <div class="py-10 pr-10 md:px-10 grid-cell-t ">                    
+                    <div class=" h-[_clamp(4em,5vw,7vw)] ">
+                        {{stats_boxes.2.svg_code}}
+                    </div>
+                    <p class="text-center mt-10  ">
+                        {{stats_boxes.2.texte_statistique}}
+                    </p>
+                </div>
+                <div class="py-10 pl-10 md:px-10 grid-cell-l">                    
+                    <div class=" h-[_clamp(4em,5vw,7vw)] ">
+                        {{stats_boxes.3.svg_code}}
+                    </div>
+                    <p class="text-center mt-10  ">
+                        {{stats_boxes.3.texte_statistique}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </section>

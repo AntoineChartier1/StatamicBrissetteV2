@@ -1,5 +1,18 @@
-title: 'carousel entre'
+title: carousels
+sites:
+  - default
+  - anglais
+propagate: false
+template: default
+layout: layout
 revisions: false
+slugs: false
+sort_dir: asc
 date_behavior:
   past: public
   future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

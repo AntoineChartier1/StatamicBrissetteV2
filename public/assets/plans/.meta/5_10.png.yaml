@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'plan 5 x 10 storage'
 size: 17581
-last_modified: 1709567088
+last_modified: 1713880657
 width: 526
 height: 285
 mime_type: image/png

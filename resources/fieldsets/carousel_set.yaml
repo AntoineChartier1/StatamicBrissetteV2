@@ -1,9 +1,11 @@
-title: "carousel Set"
+title: 'carousel Set'
 fields:
-  - handle: grid_field
+  -
+    handle: champs
     field:
       fields:
-        - handle: bard_field
+        -
+          handle: text
           field:
             buttons:
               - h2
@@ -36,7 +38,7 @@ fields:
             collapse: false
             previews: true
             type: bard
-            display: "Bard Field"
+            display: Text
             listable: hidden
             instructions_position: above
             visibility: visible
@@ -115,14 +117,16 @@ fields:
             instructions_position: above
             visibility: visible
             replicator_preview: true
-            hide_display: false    
+            hide_display: false
       mode: stacked
       reorderable: true
       fullscreen: true
       type: grid
-      display: "Grid Field"
+      display: champs
       listable: hidden
       instructions_position: above
       visibility: visible
       replicator_preview: true
       hide_display: false
+      add_row: 'ajouter une slide'
+      localizable: true

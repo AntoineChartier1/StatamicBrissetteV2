@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'boites superposés'
 size: 97648
 last_modified: 1713545661
 width: 1080

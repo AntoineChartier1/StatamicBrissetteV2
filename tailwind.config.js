@@ -6,14 +6,18 @@ export default {
         "./resources/**/*.blade.php",
         "./resources/**/*.vue",
         "./content/**/*.md",
-        ".node_modules/flowbite/**/*.js",
     ],
 
     theme: {
         extend: {
             colors: {
                 rougeBrissette: "#e73b44",
+                noir: "#222",
                 vert: "#396b2a",
+                dore: "#D0B787",
+            },
+            boxShadow: {
+                'borderBoxForm': '0 3px 0 0px #D0B787',
             },
             fontFamily: {
                 sora: ["Sora", "sans-serif"],
@@ -21,8 +25,11 @@ export default {
             keyframes: {
                 "open-menu": {
                     "0%": { transform: "scaleY(0)" },
-                    "80%": { transform: "scaleY(1.2)" },
                     "100%": { transform: "scaleY(1)" },
+                },
+                "close-menu": {
+                    "0%": { transform: "scaleY(1)" },
+                    "100%": { transform: "scaleY(0)" },
                 },
                 "infinite-scroll": {
                     from: { transform: "translateX(0)" },
@@ -30,10 +37,11 @@ export default {
                 },
             },
             animation: {
-                "open-menu": "open-menu 0.3s ease-in-out forwards",
-                "infinite-scroll": "infinite-scroll 35s linear infinite",
+                "open-menu": "open-menu 0.15s ease-in-out forwards",
+                "close-menu": "close-menu 0.15s ease-in-out forwards",
+                "infinite-scroll": "infinite-scroll 60s linear infinite",
             },
         },
     },
-    plugins: [require("@tailwindcss/typography"), require("flowbite/plugin")],
+    plugins: [require("@tailwindcss/typography")],
 };

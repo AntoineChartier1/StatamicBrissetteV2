@@ -1,0 +1,163 @@
+title: 'section accordeon'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Meta infos'
+        instructions: 'Infos utilisé pour naviguer dans el panneau de controle et le code'
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              localizable: false
+              validate:
+                - required
+      -
+        display: Contenu
+        fields:
+          -
+            handle: titre_de_laccordeon
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: "Titre de l'accordeon"
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: accordeon
+            field:
+              fields:
+                -
+                  handle: titre
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: titre
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: texte
+                  field:
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: texte
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: bouton
+                  field:
+                    default: false
+                    type: toggle
+                    display: 'bouton ?'
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: txtcta
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'label bouton'
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    if:
+                      bouton: 'equals true'
+                -
+                  handle: urlcta
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'url du bouton'
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    if:
+                      bouton: 'equals true'
+              mode: stacked
+              reorderable: true
+              fullscreen: true
+              type: grid
+              display: accordeon
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              from: title
+              generate: true
+              show_regenerate: true
+              hide_display: false

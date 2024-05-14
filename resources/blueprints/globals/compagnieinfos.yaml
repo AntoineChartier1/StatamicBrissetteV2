@@ -1,0 +1,131 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: nom
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: "nom de l'entreprise"
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              localizable: false
+          -
+            handle: logo
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: logo
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: email
+            field:
+              input_type: email
+              antlers: false
+              type: text
+              display: email
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: telephone
+            field:
+              input_type: tel
+              antlers: false
+              type: text
+              display: telephone
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              localizable: false
+          -
+            handle: adresse
+            field:
+              antlers: false
+              type: textarea
+              display: Adresse
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: lien_adresse
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'lien adresse'
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                adresse: 'not empty'
+          -
+            handle: telephone_montreal
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'telephone Montréal'
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: numero_telephone_montreal
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'numero telephone montréal'
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                telephone_montreal: 'not empty'
+          -
+            handle: lien_facebook
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'lien facebook'
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

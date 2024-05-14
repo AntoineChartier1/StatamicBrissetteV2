@@ -1,0 +1,74 @@
+title: 'section stats'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Meta infos'
+        instructions: 'Infos utilisé pour naviguer dans el panneau de controle et le code'
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              localizable: false
+              validate:
+                - required
+      -
+        display: Contenu
+        fields:
+          -
+            handle: stats_boxes
+            field:
+              fields:
+                -
+                  handle: svg_code
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'svg code ( icone )'
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: texte_statistique
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'Texte statistique'
+                    localizable: false
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+              mode: table
+              max_rows: 4
+              min_rows: 4
+              reorderable: true
+              fullscreen: true
+              type: grid
+              display: 'boite de statistique'
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

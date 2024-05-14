@@ -6,12 +6,19 @@ preferences:
   collections:
     pages:
       after_save: continue_editing
+    sections:
+      after_save: continue_editing
+      columns:
+        - title
+        - site
+        - slug
+        - status
   favorites:
     -
       name: 'Home ‹ Pages ‹ Collections'
       url: collections/pages/entries/home
-  assets:
-    assets:
-      mode: grid
-    plan_formulaire:
-      mode: grid
+  forms:
+    contact_form:
+      columns:
+        - datestamp
+        - prenom

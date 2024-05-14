@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="{{ site:short_locale }}">
+
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>ssg:{{ title ?? site:name }}</title>
-        <link rel="shortcut icon" type="image/x-icon" href="{{ glide src='/assets/favicon_entrepot.jpg' }}">
-        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"></noscript>
-        {{ vite src="resources/js/site.js|resources/js/gsapAnim.js|resources/css/site.css" }}
+        <title>ssg : {{ title ?? site:name }}</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon_entrepot.jpg">
+
+        {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
 
-    <body class="bg-[#fbf8f3] font-sora leading-normal">
+    <body class=" flex flex-col bg-[#fbf8f3] font-sora min-h-screen overflow-x-hidden">
 
-        <header>
+        <header class="">
             {{ partial:header }}
         </header>
 
-        {{# <div class="box h-20 w-20 bg-green-500" >few</div> #}}
-
-        <main>
+        <main class="flex-grow bg-[#fbf8f3] z-10" >
             {{ template_content }}
         </main>
 
+        {{# // footer #}}
+        <footer class="flex flex-col sticky bottom-0 h-full">
+            {{ partial:footer }}
+        </footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" ></script>
 
-
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     </body>
 </html>
+

@@ -25,28 +25,34 @@
         </ul>                
     </div>
     {{ /if }}
-    {{ partial:carousel }}
-    {{ partial:section1Text}}
-    {{ partial:section2Formulaire}}
     
-    <section class="w-full h-full [padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)]">
-        <div class=" grid [grid-auto-rows:1fr] gap-10" >
-            <div class="md:flex">
-                <img src="{{ glide src="assets/iStock-1803817492.webp" }}" alt="" class="md:[width:52%] object-cover rounded-3xl" fetchpriority="low" loading="lazy">
-                <div class="md:w-1/2 py-5 md:p-10">
-                    <h2 class="[font-size:_clamp(1.5em,1.8vw,2.5vw)] mb-4">Historique</h2>
-                    <p class="[font-size:_clamp(1em,1vw,2vw)]">Depuis 1977, Gestion J.G Courchesne inc. offre des services d'entreposage flexible et sécuritaire. Notre système de déverrouillage par code d'accès vous assure un accès unique et protège votre espace de rangement, et notre personnel qualifié est toujours disponible sur place pour vous assister et répondre à vos questions. Les lieux sont sous surveillance vidéo en permanence et les plans intérieurs et extérieurs de votre unité sont accessibles en tout temps sur notre plateforme web, vous permettant ainsi d'avoir un œil sur vos biens.</p>
+    {{ partial:carousel}}
+
+    {{ les_sections title:is="CTA accueil"}}
+        {{ partial:section1Text}}
+            <p class="text-center">
+                <div class="flex justify-center">
+                    {{ partial:boutonCTA label="{{txtcta}}" btn_url="{{urlcta}}" couleur="rouge" }}
                 </div>
-            </div>
-            <div class="md:flex md:flex-row-reverse md:items-stretch">
-                <img src="{{ glide src="/assets/iStock-1473145871.webp" }} " alt="" class="md:[width:52%] object-cover rounded-3xl" fetchpriority="low" loading="lazy">
-                <div class="md:w-1/2 py-5 md:p-10 flex flex-col justify-center">
-                    <h2 class="[font-size:_clamp(1.5em,1.8vw,2.5vw)] mb-4">Besoin de matériel pour entreposer vos biens?</h2>
-                    <p class="[font-size:_clamp(1em,1vw,2vw)]">Notre boutique vous fournit tous les articles nécessaires pour entreposer vos biens de manière sécuritaire et durable. Nous avons des boîtes et des articles d'entreposage pour tous vos besoins de rangement!</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            </p>
+        {{ /partial:section1Text}} 
+    {{/les_sections}}
+
+    {{ les_sections title:is="J'ai besoin d'entrepot"}}
+        {{ partial:section2Formulaire}} 
+    {{/les_sections}}
+
+    {{ les_sections title:is="Images successives"}}
+        {{ partial:section3Images}}
+    {{/les_sections}}
+    
+    {{ les_sections title:is="CTA bas de page"}}
+        {{ partial:sectionCTAbasdepage}}
+    {{/les_sections}}
+
+    {{les_sections title:is="statistiques"}}
+        {{ partial:section4Stats}}
+    {{/les_sections}}
 
 
 </div>

@@ -1,13 +1,9 @@
+{{ vite src="resources/js/gsapAnimSectionCTA.js" }}
 
-<section class="w-full h-full [padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)]" >
-    <h1 class=" [font-size:_clamp(2em,4vw,5vw)] [margin-bottom:_clamp(0.5em,0.5vw,1vw)] text-center" >Trouvez votre unité d’entreposage</h1>
-    <p class=" [font-size:_clamp(0.9em,1.5vw,2vw)] [margin-bottom:_clamp(1em,0.8vw,1vw)] text-center" >Trouvez l’unité idéale pour tous vos besoins d’entreposage commercial ou domestique. Parcourez notre sélection d’entrepôts de 5 pi2 à 250 pi2 selon les dimensions nécessaires ou le type de biens à entreposer.</p>
-    <p class="text-center">
-        <a href="{{btn_url}}" class="self-start inline-flex items-center justify-center text-center rounded-2xl font-semibold bg-rougeBrissette text-white py-2 px-1.5 md:py-4 md:px-9 xl:py-6 xl:px-12 xl:text-2xl ">
-            En savoir plus &nbsp;
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
-                <path d="M1 7.93536L14.7232 7.79851M9.61818 1.41132L16.1412 7.9343L9.48677 14.5887" stroke="#ffffff" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
-            </svg>
-        </a>
-    </p>
+
+<section id="sectionCTA" class="w-full h-full [padding:_clamp(2em,5vw,5vw)_clamp(0.9em,6vw,6vw)_clamp(0.9em,2.2vw,6vw)]" >
+    <h1 class=" [font-size:_clamp(2em,4vw,5vw)] [margin-bottom:_clamp(0.5em,0.5vw,1vw)] text-center" >{{titre}}</h1>
+    <p class=" [font-size:_clamp(0.9em,1.5vw,2vw)] [margin-bottom:_clamp(1em,0.8vw,1vw)] text-center" > {{texte}} </p>
+        {{# bouton si il y a lieu #}}
+        {{ slot }} 
 </section>

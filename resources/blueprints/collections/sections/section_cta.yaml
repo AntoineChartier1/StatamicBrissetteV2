@@ -1,0 +1,114 @@
+title: 'section CTA'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Meta infos'
+        instructions: 'Infos utilisé pour naviguer dans el panneau de controle et le code'
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              localizable: false
+              validate:
+                - required
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              input_type: text
+              antlers: false
+              hide_display: false
+      -
+        display: contenu
+        fields:
+          -
+            handle: titre
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Titre
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: texte
+            field:
+              antlers: false
+              type: textarea
+              display: Texte
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: bouton
+            field:
+              inline_label: 'afficher un bouton ?'
+              default: false
+              type: toggle
+              display: 'bouton ?'
+              localizable: false
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: txtcta
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'label du bouton'
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                bouton: 'equals true'
+          -
+            handle: urlcta
+            field:
+              input_type: url
+              antlers: false
+              type: text
+              display: 'url du bouton'
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                bouton: 'equals true'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              from: title
+              generate: true
+              show_regenerate: true
+              hide_display: false

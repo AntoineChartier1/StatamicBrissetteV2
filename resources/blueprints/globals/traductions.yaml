@@ -1,0 +1,21 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: texte_page_erreur_404
+            field:
+              input_type: text
+              placeholder: 'page introuvable'
+              default: 'page introuvable'
+              antlers: false
+              type: text
+              display: 'Texte page erreur 404'
+              localizable: true
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

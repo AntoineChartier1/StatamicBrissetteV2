@@ -1,122 +1,74 @@
+import Lenis from 'lenis'
 // This is all you.
-// Import the Carousel class from Flowbite
-import { Carousel } from 'flowbite';
+
 
 const initApp = () => {
     const body = document.body;
     const hamburgerBtn = document.getElementById("hamburger-button");
     const mobileMenu = document.getElementById("mobile-menu");
 
+const animationDuration = window.getComputedStyle(mobileMenu).animationDuration;
+
+// Remove 's' or 'ms' from the end of the string and convert to a number
+let duration = parseFloat(animationDuration);
+
+// If the original duration was in seconds, convert to milliseconds
+if (animationDuration.includes('s')) {
+    duration *= 1000;
+}
+
+    mobileMenu.classList.remove('animate-close-menu', 'animate-open-menu');
+    let firstClick = true;
+
     const toggleMenu = () => {
-        mobileMenu.classList.toggle("hidden");
-        body.classList.toggle("overflow-hidden"); // 
-        // body.style.overflow = 'hidden';
-        // mobileMenu.classList.toggle("flex");
+        hamburgerBtn.disabled = true;
+        const isMenuOpen = mobileMenu.classList.contains("hidden");
+
+        if (firstClick) {
+            mobileMenu.classList.toggle("hidden");
+            hamburgerBtn.disabled = false;
+            mobileMenu.classList.toggle("animate-open-menu");
+        } else {
+            console.log("close");
+            mobileMenu.classList.toggle("animate-open-menu");
+            mobileMenu.classList.toggle("animate-close-menu");
+            if (!isMenuOpen) {
+                // Add a delay before toggling the 'hidden' class
+                setTimeout(() => {
+                    mobileMenu.classList.toggle("hidden");
+                    hamburgerBtn.disabled = false;
+                }, duration); // Change this value to adjust the delay
+            } else {
+                mobileMenu.classList.toggle("hidden");
+                hamburgerBtn.disabled = false;
+            }
+        }
+
         hamburgerBtn.classList.toggle("toggle-btn");
+        firstClick = false;
     };
 
     hamburgerBtn.addEventListener("click", toggleMenu);
-    mobileMenu.addEventListener("click", toggleMenu); // close when clicking outside any links
 
 
 
-    
 
 
-// Get the carousel element
-const carouselElement = document.getElementById('carousel-example');
+// smooth scrolling 
+const lenis = new Lenis()
 
-// Get the carousel items
-const carouselItems = document.querySelectorAll('[data-carousel-item]');
+// lenis.on('scroll', (e) => {
+//   console.log(e)
+// })
 
-const items = Array.from(carouselItems).map((el, index) => {
-    return {
-        position: index,
-        el: el
-    };
-});
-// const items = [
-//     {
-//         position: 0,
-//         el: document.getElementById('carousel-item-1'),
-//     },
-//     {
-//         position: 1,
-//         el: document.getElementById('carousel-item-2'),
-//     },
-//     {
-//         position: 2,
-//         el: document.getElementById('carousel-item-3'),
-//     },
-//     // Add more items as needed...
-// ];
+lenis.on('scroll', ScrollTrigger.update)
 
-// Set the options
-const options = {
-    // Add your options here...
-    interval: 6000, // interval pour le carousel automatique (static / slide)
-};
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
 
-// Create the carousel
-const carousel = new Carousel(carouselElement, items, options);
-
-// Add event listeners for the next and previous buttons
-const $prevButton = document.getElementById('data-carousel-prev');
-const $nextButton = document.getElementById('data-carousel-next');
-
-
-let isTransitioning = false;
-
-
-$prevButton.addEventListener('click', () => {
-    if (!isTransitioning) {
-        isTransitioning = true;
-        carousel.prev();
-        setTimeout(() => {
-            isTransitioning = false;
-        }, 300); // Replace 300 with your transition duration
-    }
-});
-
-$nextButton.addEventListener('click', () => {
-    if (!isTransitioning) {
-        isTransitioning = true;
-        carousel.next();
-        setTimeout(() => {
-            isTransitioning = false;
-        }, 300); // Replace 300 with your transition duration
-    }
-});
-
-
-
-// Add touch event listeners for swipe gestures
-let touchStartX = 0;
-let touchEndX = 0;
-
-carouselElement.addEventListener('touchstart', (event) => {
-    touchStartX = event.changedTouches[0].screenX;
-}, false);
-
-carouselElement.addEventListener('touchend', (event) => {
-    touchEndX = event.changedTouches[0].screenX;
-    handleSwipe();
-}, false);
-
-function handleSwipe() {
-    if (touchEndX < touchStartX) {
-        carousel.next();
-    }
-    
-    if (touchEndX > touchStartX) {
-        carousel.prev();
-    }
-}
-
+gsap.ticker.lagSmoothing(0)
 
 };
-
 
 document.addEventListener("DOMContentLoaded", initApp);
-
-

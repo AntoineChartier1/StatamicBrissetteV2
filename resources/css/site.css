@@ -7,6 +7,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 
 
+
+
 .toggle-btn {
     @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent;
 }
@@ -25,14 +27,170 @@
 } */
 
 
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 /* arrete le horizontal scroll au hover */
 .parent-container:hover .animate-infinite-scroll {
     animation-play-state: paused;
 }
 
+.wrapper .carousel{
+    /* height: 50vw; */
+    scrollbar-width: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+.wrapper .carousel.no-transition{
+    scroll-behavior: auto;
+
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .slide {
+  height: 100%;
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel .slide{
+  height: 100%;
+  scroll-snap-align: start;
+} 
 
 /* liste texte dans le carousel */
-.font-ul ul
+.carousel .font-ul ul
 {
     @apply [font-size:0.6em] list-disc [padding-left:1.6em] [padding-top:0.5em];
+}
+
+
+.bouton{
+    @apply inline-flex whitespace-nowrap overflow-hidden justify-center self-start items-center text-center px-3 py-3 sm:px-8 sm:py-4 rounded-2xl font-semibold [font-size:_clamp(0.85em,1.5vw,2vw)];
+    &:hover
+    {
+        @apply shadow-md opacity-80; 
+        :is(svg)
+        {
+            @apply transform scale-110 translate-x-1;
+        }
+    }
+    :is(svg)
+    {
+        @apply w-5 h-5 sm:w-6 sm:h-6;
+    }
+
+  }
+  @media (max-width: 639px) {
+    .bouton {
+      
+      @apply text-[100%] w-full;  
+
+      }
+  }
+
+/* self-start inline-flex items-center justify-center text-center rounded-2xl font-semibold bg-white py-2 px-1.5 md:py-4 md:px-9 xl:py-6 xl:px-12 xl:text-2xl  */
+
+.tableau td
+{
+    @apply p-[10%] md:p-[5%];
+}
+
+.grid-cell-r {
+    position: relative;
+  }
+  
+  .grid-cell-r::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Or any width you want for the border */
+    background: #D0B787; /* Or any color you want for the border */
+  }
+
+
+.grid-cell-l {
+    position: relative;
+  }
+  
+  .grid-cell-l::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    width: 2px; /* Or any width you want for the border */
+    background: #D0B787; /* Or any color you want for the border */
+  }
+
+
+  @media (min-width: 768px) { /* corresponds to 'md' in Tailwind */
+    .lg-grid-cell-r {
+        position: relative;
+      }
+      
+      .lg-grid-cell-r::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px; /* Or any width you want for the border */
+        background: #D0B787; /* Or any color you want for the border */
+      }
+  }
+  @media (max-width: 767px) { /* corresponds to 'md' in Tailwind */
+    .grid-cell-t {
+        position: relative;
+      }
+      
+      .grid-cell-t::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -1px;
+        height: 2px; /* Or any width you want for the border */
+        background: #D0B787; /* Or any color you want for the border */
+      }
+      .grid-cell-b {
+        position: relative;
+      }
+      
+      .grid-cell-b::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 2px; /* Or any width you want for the border */
+        background: #D0B787; /* Or any color you want for the border */
+      } 
 }
