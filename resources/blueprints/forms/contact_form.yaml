@@ -21,7 +21,7 @@ tabs:
             handle: telephone
             field:
               type: integer
-              display: téléphone
+              display: Téléphone
               localizable: true
           -
             handle: zonetexte
