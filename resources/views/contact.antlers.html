@@ -36,7 +36,7 @@
             {{ if locale == "default" }}
             <div class="md:w-2/3">
 
-                {{ nocache }} 
+                
                 {{ form:contact_form }}
 
                 <div class="flex flex-col space-y-12">
@@ -100,12 +100,12 @@
             <input type="text" class="hidden" name="{{ honeypot ?? 'username' }}">
 
             {{ /form:contact_form }}
-            {{ /nocache }} 
+   
 
             {{ else }}
             <div class="md:w-2/3">
             
-            {{ nocache }} 
+
             {{ form:contact_us }}
 
                 <div class="flex flex-col space-y-12">
@@ -168,7 +168,7 @@
             {{# // Add the honeypot field #}}
             <input type="text" class="hidden" name="{{ honeypot ?? 'username' }}">
             {{ /form:contact_us }}
-            {{ /nocache }} 
+
         {{ /if }}
             </div>
 
