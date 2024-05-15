@@ -39,7 +39,7 @@
 
                 
                 {{ form:contact_form data-netlify="true" }}
-
+                <input type="hidden" name="form-name" value="contact_form" />
                 <div class="flex flex-col space-y-12">
                     {{# {{fields.0.handle | dump}} #}}
                 {{# // First let's check if this is after a submission, and if so, was it successful. #}}
