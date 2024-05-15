@@ -39,7 +39,7 @@
                 {{ form:contact_form }}
 
                 <div class="flex flex-col space-y-12">
-                    {{# {{fields.0.handle | dump}} #}}
+                    {{action | dump}}
                 {{# // First let's check if this is after a submission, and if so, was it successful. #}}
     {{# // If it was, just show the success message. After all, we don't want them submitting again once they've gotten in touch! #}}
             {{ if success }}
