@@ -25,9 +25,9 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
         }
 
-        // Statamic::vite('app', [
-        //     'resources/js/cp.js',
-        //     'resources/css/cp.css',
-        // ]);
+        Statamic::vite('app', [
+            'resources/js/cp.js',
+            'resources/css/cp.css',
+        ]);
     }
 }
