@@ -37,10 +37,9 @@
             {{# {{ partial:forms }} #}}
             
 
-
             <div class="md:w-2/3 ">
-                <form name="contact" netlify netlify-honeypot="user" >
-                <input type="hidden" name="subject" value="%{siteName} %{formName} (%{submissionId}) " />
+                <form name="contact" netlify netlify-honeypot="user" data-lang="{{locale}}">
+                <input type="hidden" name="subject" value="%{siteName} %{formName} (%{submissionId})" />
                     
                     <div class="flex flex-col space-y-12">
                         {{les_sections.1}}
@@ -73,6 +72,7 @@
                             <textarea id="contenu" name="contenu" class="w-full h-40 px-4 py-2 border-b-[1px] border-dore focus:shadow-borderBoxForm focus:outline-none transition-opacity duration-300 focus:opacity-100 bg-inherit"></textarea>
                             <span class="absolute top-2 left-4 transition-opacity duration-300 opacity-50 focus:opacity-0 pointer-events-none">{{champs.4.champ_label}}</span>
                         </div>
+                        <div class="hidden"><input type="text" name="user"></div>
                         <button type="submit" class="bouton bg-rougeBrissette text-white sm:ml-auto">
                             {{bouton_label}} &nbsp;
                             <svg fill="#ffff" width="0px" height="0px" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" >
@@ -81,7 +81,6 @@
                         </button>
                         {{/les_sections.1}}
                     </div>
-
                 </form>
             </div>
 

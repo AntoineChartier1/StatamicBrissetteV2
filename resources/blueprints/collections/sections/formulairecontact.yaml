@@ -17,6 +17,15 @@ tabs:
         display: Contenu
         fields:
           -
+            handle: langue
+            field:
+              options:
+                FR: Francais
+                EN: English
+              type: radio
+              display: Langue
+              localizable: false
+          -
             handle: champs
             field:
               type: grid
