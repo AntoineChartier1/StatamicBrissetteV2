@@ -1,0 +1,66 @@
+title: FormulaireContact
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              localizable: false
+              validate:
+                - required
+      -
+        display: Contenu
+        fields:
+          -
+            handle: champs
+            field:
+              type: grid
+              display: champs
+              localizable: true
+              fields:
+                -
+                  handle: champ_label
+                  field:
+                    type: text
+                    display: 'champ Label'
+                    localizable: false
+                -
+                  handle: champ_type
+                  field:
+                    options:
+                      text: texte
+                      email: Courriel
+                      tel: Téléphone
+                    type: select
+                    display: 'champ type'
+                    localizable: false
+                -
+                  handle: champ_for
+                  field:
+                    from: champ_label
+                    show_regenerate: true
+                    type: slug
+                    display: 'champ for'
+                    localizable: false
+          -
+            handle: bouton_label
+            field:
+              type: text
+              display: 'bouton label'
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
