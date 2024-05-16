@@ -6,22 +6,22 @@ champs:
     id: lw9c2j93
     champ_label: 'First Name'
     champ_type: text
-    champ_for: first-name
+    champ_for: prenom
   -
     id: lw9c2urh
     champ_label: 'Last Name'
     champ_type: text
-    champ_for: last-name
+    champ_for: nom
   -
     id: lw9c30i6
     champ_label: Email
     champ_type: email
-    champ_for: email
+    champ_for: adresse-courriel
   -
     id: lw9c3agi
     champ_label: Phone
     champ_type: tel
-    champ_for: phone
+    champ_for: telephone
   -
     id: lw9c3gto
     champ_label: Message
@@ -29,5 +29,5 @@ champs:
     champ_for: message
 bouton_label: Send
 updated_by: b357ad0e-1acf-4788-ba7d-7e1f18fcd7d0
-updated_at: 1715869708
+updated_at: 1715871757
 ---
