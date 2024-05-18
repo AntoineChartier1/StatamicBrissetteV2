@@ -31,10 +31,10 @@
             <nav
                 class="flex flex-col items-center py-20 text-white gap-6 [font-size:_clamp(0.6em,7.5vw,8vw)]"
             >
-                {{nav:topnav}}
+                {{nav:topnav select="title|url"}}
                 <a href="{{ url }}" class="p-3 my-7 text-center border-2 hover:bg-black/5">{{ title }}</a>
                 {{/nav:topnav}}
-                {{ nav from="pages" }}
+                {{ nav from="pages" max_depth="1" select="title|url"}}
                 <a href="{{ url }}" class="p-3 text-center hover:text-white/75">{{ title }}</a>
                 {{ /nav }}
                 {{ locales self="false" }}
@@ -51,8 +51,8 @@
                 <li>
                     <a href="tel:{{compagnieinfos:telephone}}" class="hover:text-white/75">{{compagnieinfos:telephone}}</a>
                 </li>
-                <li class="">
-                    {{nav:topnav}}
+                <li>
+                    {{nav:topnav select="title|url"}}
                     <a href="{{ url }}" class="p-3 my-7 text-center border-2 hover:bg-black/5">{{ title }}</a>
                     {{/nav:topnav}}
                 </li>
@@ -80,7 +80,7 @@
         </a>
 
         <div class="hidden md:flex gap-[_clamp(1.2em,1.8vw,2vw)]">
-            {{ nav from="pages" }}
+            {{ nav from="pages" max_depth="1"}}
             <a href="{{ url }}" class="hover:text-rougeBrissette/50"
                 >{{ title }}</a
             >

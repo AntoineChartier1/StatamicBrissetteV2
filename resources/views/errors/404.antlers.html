@@ -45,7 +45,7 @@
                         class="p-3 my-7 text-center border-2 hover:bg-black/5"
                         >{{ title }}</a
                     >
-                    {{/nav:topnav}} {{ nav from="pages" include_home="true"}}
+                    {{/nav:topnav}} {{ nav from="pages" include_home="true" max_depth="1"}}
                     <a
                         href="{{ url }}"
                         class="p-3 text-center hover:text-white/75"
@@ -98,7 +98,8 @@
                             >{{ title }}</a
                         >
                     </li>
-                    {{/nav:topnav}} {{ nav from="pages" include_home="true" }}
+                    {{/nav:topnav}} 
+                    {{ nav from="pages" include_home="true" max_depth="1" }}
                     <li>
                         <a
                             href="{{ url }}"
@@ -106,18 +107,7 @@
                             >{{ title }}</a
                         >
                     </li>
-                    {{ /nav }} {{#
-                    <li>
-                        {{ sites }}
-                        <a
-                            class="{{ site:handle === handle ?= 'hidden' }} uppercase"
-                            href="{{ url }}"
-                        >
-                            {{ short_locale }}
-                        </a>
-                        {{ /sites }}
-                    </li>
-                    #}}
+                    {{ /nav }} 
                 </ul>
             </div>
         </div>

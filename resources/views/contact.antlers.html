@@ -39,7 +39,7 @@
 
             <div class="md:w-2/3 ">
                 <form name="contact" netlify netlify-honeypot="user" >
-                <input type="hidden" name="subject" value="%{siteName} %{formName} (%{submissionId})" />
+                <input type="hidden" name="subject" value="%{siteName} %{formName} (%{submissionId})" action="contact/succes"/>
                 <input type="hidden" name="langue" value="{{locale}}" />
                     
                     <div class="flex flex-col space-y-12">
