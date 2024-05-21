@@ -38,6 +38,7 @@
             
 
             <div class="md:w-2/3 ">
+                {{ nocache }} 
                 <form name="contact" netlify netlify-honeypot="user" action="{{ link to="/contact/succes/" }}">
                 <input type="hidden" name="subject" value="%{siteName} %{formName} (%{submissionId})" />
                 <input type="hidden" name="langue" value="{{locale}}" />
@@ -83,6 +84,7 @@
                         {{/les_sections.1}}
                     </div>
                 </form>
+                {{ /nocache }} 
             </div>
 
 
