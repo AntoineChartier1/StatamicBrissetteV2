@@ -38,7 +38,7 @@
             
 
             <div class="md:w-2/3 ">
-                <form name="contact" netlify netlify-honeypot="user" action="{{ link to="/contact/succes/" }}">
+                <form name="contact" id="myForm" netlify netlify-honeypot="user">
                 <input type="hidden" name="subject" value="%{siteName} %{formName} (%{submissionId})" />
                 <input type="hidden" name="langue" value="{{locale}}" />
                     
@@ -83,6 +83,7 @@
                         {{/les_sections.1}}
                     </div>
                 </form>
+                
             </div>
 
 
@@ -98,7 +99,39 @@
 
 
 
-
+<script>
+    document.getElementById('myForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent the form from submitting normally
+    
+        // Get form data
+        var formData = new FormData(e.target);
+    
+        // URL-encode form data
+        var encodedFormData = new URLSearchParams(formData).toString();
+    
+        // Send form data to Netlify
+        fetch('/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encodedFormData
+        })
+        .then(response => {
+            if (!response.ok) {
+                // Handle error
+                console.error('Form submission failed');
+                return;
+            }
+    
+            // Form submission was successful
+            // Display success message
+            document.getElementById('myForm').innerHTML = '<p>Thanks for filling out the survey! Sorry it was so long.</p>';
+        })
+        .catch(error => {
+            // Handle error
+            console.error('Form submission failed', error);
+        });
+    });
+    </script>
 
 
 <script>
