@@ -98,6 +98,9 @@
 <iframe src="https://snazzymaps.com/embed/605386" width="100%" height="600px" style="border:none;"></iframe>
 
 
+<script>
+    var locale = "{{ locale }}";
+</script>
 
 <script>
     document.getElementById('myForm').addEventListener('submit', function(e) {
@@ -123,15 +126,16 @@
             }
     
             // Form submission was successful
-            // Display success message
-            document.getElementById('myForm').innerHTML = '<p>Thanks for filling out the survey! Sorry it was so long.</p>';
+            // Display success message in the correct language
+            var successMessage = locale === 'default' ? '<p>Merci d\'avoir rempli soumis une demande.</p>' : '<p>Thanks for filling out a request.</p>';
+            document.getElementById('myForm').innerHTML = successMessage;
         })
         .catch(error => {
             // Handle error
             console.error('Form submission failed', error);
         });
     });
-    </script>
+</script>
 
 
 <script>
