@@ -127,7 +127,7 @@
     
             // Form submission was successful
             // Display success message in the correct language
-            var successMessage = locale === 'default' ? '<p>Merci d\'avoir rempli soumis une demande.</p>' : '<p>Thanks for filling out a request.</p>';
+            var successMessage = locale === 'default' ? '<p>Merci d\'avoir soumis une demande.</p>' : '<p>Thanks for filling out a request.</p>';
             document.getElementById('myForm').innerHTML = successMessage;
         })
         .catch(error => {
