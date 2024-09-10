@@ -5,7 +5,7 @@ namespace Facades\Statamic\UpdateScripts;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Statamic\UpdateScripts\Manager
+ * @mixin \Statamic\UpdateScripts\Manager
  */
 class Manager extends Facade
 {

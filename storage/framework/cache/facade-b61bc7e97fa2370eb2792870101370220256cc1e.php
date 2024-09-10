@@ -5,7 +5,7 @@ namespace Facades\Statamic\CP\Utilities;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Statamic\CP\Utilities\CoreUtilities
+ * @mixin \Statamic\CP\Utilities\CoreUtilities
  */
 class CoreUtilities extends Facade
 {
