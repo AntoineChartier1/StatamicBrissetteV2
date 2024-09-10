@@ -4534,6 +4534,7 @@
                 }
             ],
             "time": "2024-05-22T20:11:44+00:00"
+<<<<<<< HEAD
         },
         {
             "name": "statamic/ssg",
@@ -4582,6 +4583,8 @@
                 "source": "https://github.com/statamic/ssg/tree/3.0.1"
             },
             "time": "2024-05-17T19:40:01+00:00"
+=======
+>>>>>>> origin/main
         },
         {
             "name": "statamic/stringy",
