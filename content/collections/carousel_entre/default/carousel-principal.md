@@ -159,7 +159,7 @@ champs:
             text: "20\_% de rabais"
           -
             type: text
-            text: "supplémentaire sur vos espaces de rangement jusqu’au 30\_avril 2024."
+            text: "supplémentaire sur vos espaces de rangement jusqu’au 30\_avril 2025."
     assets_field: hero3.webp
     bouton: true
     btn_txt: 'En savoir plus'
@@ -180,7 +180,7 @@ champs:
             text: "20\_% de rabais"
           -
             type: text
-            text: " supplémentaire sur vos espaces de rangement jusqu’au 30\_avril 2024."
+            text: " supplémentaire sur vos espaces de rangement jusqu’au 30\_avril 2025."
   -
     id: lve4y3ge
     bard_field:
