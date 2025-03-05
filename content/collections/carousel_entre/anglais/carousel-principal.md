@@ -79,7 +79,7 @@ champs:
             text: 'additional 20% off'
           -
             type: text
-            text: ' your storage spaces until April 30, 2025.'
+            text: ' your storage spaces until May 30, 2025.'
   -
     id: lve4y3ge
     bard_field:
